@@ -4,7 +4,7 @@ Selamat datang di repositori **LAB-WEB-05-2026**! Repositori ini digunakan untuk
 
 ---
 
-## 📌 Cara Pengumpulan (Tugas Pertama)
+##  Cara Pengumpulan (Tugas Pertama)
 
 Ikuti langkah-langkah berikut khusus untuk pengumpulan tugas pertama kali:
 
@@ -67,7 +67,7 @@ Di halaman repositori GitHub akunmu, klik tautan *Pull Request* yang muncul untu
 
 ---
 
-## 🚀 Pengumpulan Tugas Minggu Berikutnya (Tugas 2, 3, dst)
+##  Pengumpulan Tugas Minggu Berikutnya (Tugas 2, 3, dst)
 
 Mulai minggu kedua, langkahnya lebih singkat. **Jangan** melakukan *Fork* atau *Clone* ulang.
 
