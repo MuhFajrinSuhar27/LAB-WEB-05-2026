@@ -11,7 +11,8 @@ Ikuti langkah-langkah berikut khusus untuk pengumpulan tugas pertama kali:
 **1. Fork Repositori**
 Di kanan atas halaman repositori ini, klik tombol **"Fork"** -> **"Create a new fork"** untuk membuat salinan repositori ini ke akun GitHub pribadimu.
 
-<img width="620" height="160" alt="image" src="[https://github.com/user-attachments/assets/4c6a80c6-d2e0-4af3-abe0-720dfef4eb58](https://github.com/user-attachments/assets/4c6a80c6-d2e0-4af3-abe0-720dfef4eb58)" />
+<img width="618" height="162" alt="image" src="https://github.com/user-attachments/assets/00dadcf2-db52-436f-b39d-5897f4eb75ae" />
+
 
 <br>
 <br>
