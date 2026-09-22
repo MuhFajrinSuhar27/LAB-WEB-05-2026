@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+.konten {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    align-items: center;
+    padding-top: 250px;
+    gap: 20px;
+    border-radius: 20px;
+}
+
+#nama {
+    height: 50px;
+    width: 250px;  
+}
+#pass {
+    height: 50px;
+    width: 250px;
+
+}
+
+#kirim {
+    height: 50px;
+    width: 100px;
+}
+
+
+.btn-submit:hover {
+    background-color: aqua;
+}

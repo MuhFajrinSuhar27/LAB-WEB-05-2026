@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destinasi Wisata Labuan Bajo</title>
-    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -24,21 +24,21 @@
     </nav>
 
     <main>
-        <section id="informasi">
+        <section id="informasi" class="konten-section">
             <h2>Tentang Labuan Bajo</h2>
             <p>Labuan Bajo adalah destinasi wisata eksotis di Nusa Tenggara Timur yang terkenal dengan keindahan alamnya. Perpaduan laut biru jernih, pulau-pulau cantik, perbukitan hijau, serta pesona komodo menjadikannya tempat yang memukau untuk menikmati petualangan dan ketenangan alam.</p>
         </section>
 
-        <section id="galeri">
+        <section id="galeri" class="konten-section">
             <h2>Galeri Foto</h2>
-            <img src="assets/on-the-westernmost-tip.jpg" alt="Keindahan Pulau Kelor" width="250">
-            <br>
-            <img src="assets/images.jpg" alt="Komodo di pesisir Pulau Komodo" width="250">
-            <br>
-            <img src="assets/pink-beach.jpg" alt="Secuil Surga di Pink Beach" width="250">
+            <div class="galeri-grid">
+                <img src="assets/on-the-westernmost-tip.jpg" alt="Keindahan Pulau Kelor" >
+                <img src="assets/images.jpg" alt="Komodo di pesisir Pulau Komodo">
+                <img src="assets/pink-beach.jpg" alt="Secuil Surga di Pink Beach">
+            </div>
         </section>
 
-        <section id="aktivitas">
+        <section id="aktivitas" class="konten-section">
             <h2>Aktivitas Menarik di Labuan Bajo</h2>
             <dl>
                 <dt>Melihat Komodo</dt>
@@ -50,12 +50,12 @@
             </dl>
         </section>
 
-        <section id="lokasi">
+        <section id="lokasi" class="konten-section">
             <h2>Lokasi Labuan Bajo</h2>
             <p> Labuan Bajo, Kabupaten Manggarai Barat, Nusa Tenggara Timur. Terletak di ujung barat Pulau Flores dan merupakan pintu gerbang menuju Taman Nasional Komodo.</p>
         </section>
 
-        <section id="tabel">
+        <section id="tabel" class="konten-section">
             <h2>Jadwal Perjalanan</h2>
             <table border="1">
                 <thead>
@@ -124,13 +124,13 @@
             </table>
         </section>
 
-        <section id="multimedia">
+        <section id="multimedia" class="konten-section">
             <h2>Video</h2>
-            <video width="500" controls>
+            <video controls>
                 <source src="assets/stock-footage-aerial-view-of-the-northern-headland-near-labuan-bajo-in-komodo-national-park-indonesia.webm" type="video/webm">
             </video>
         </section>
-        <section id="form">
+        <section id="form" class="konten-section">
             <h2>Pemesanan Tiket</h2>
             <form action="#" method="POST">
                 <fieldset>
@@ -152,7 +152,7 @@
                     <label for="pesan">Pesan: </label>
                     <textarea name="pesan" id="pesan" rows="4" placeholder="Contoh: 2 Hari (Hari ke-1 dan ke-3)"></textarea>
                     <br><br>
-                    <input type="submit" value="Kirim Pesanan">
+                    <input type="submit" value="Kirim Pesanan" class="btn-submit">
                 </fieldset>
             </form>
         </section>
