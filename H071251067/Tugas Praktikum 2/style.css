@@ -1,0 +1,210 @@
+/* ---------- 1. ELEMENT SELECTOR ---------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #a77979;
+    line-height: 1.5;
+}
+
+h1, h2, h4 {
+    color: #160303;
+}
+
+p {
+    color: #180505;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* ---------- HEADER ---------- */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #9986a5;
+    border-bottom: 2px solid #080606;
+}
+
+/* ---------- 2. CLASS SELECTOR ---------- */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    background-color: #cb65e2;
+    padding: 12px;
+    margin: 0;
+}
+
+.navbar a {
+    color: #d5bfbf;
+    text-decoration: none;
+    padding: 6px 10px;
+}
+
+/* ---------- 6. PSEUDO-CLASS ---------- */
+.navbar a:hover {
+    background-color: #6d0d0d;
+    border-radius: 10px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+section {
+    margin-bottom: 10px;
+    padding: 20px;
+    border: 1px solid #6f0a0a;
+}
+
+/* ---------- 3. ID SELECTOR ---------- */
+#tentang {
+    background-color: #c89999;
+}
+
+#formulir {
+    background-color: #935b5b;
+}
+
+/* ---------- GALERI (CSS GRID) ---------- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    margin: 0;
+    padding: 8px;
+    border: 1px solid #ad8f8f;
+    text-align: center;
+}
+
+.gallery-item figcaption {
+    font-size: 0.9rem;
+    color: #775e5e;
+    margin-top: 6px;
+}
+
+/* ---------- AKTIVITAS ---------- */
+.activity-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.activity-list li {
+    padding: 12px;
+    flex: 1 1 200px;
+}
+
+/* ---------- LOKASI ---------- */
+.map-frame {
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid #cccccc;
+    display: block;
+    margin: 15px auto 0;
+}
+
+/* ---------- TABEL FASILITAS ---------- */
+.facility-table th,
+.facility-table td {
+    border: 1px solid #cccccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.facility-table th {
+    background-color: #b5a8a8;
+    color: #6b2c2c;
+}
+
+/* PSEUDO-CLASS pada baris tabel */
+.facility-table tr:hover {
+    background-color: #9b8585;
+}
+
+/* ---------- FORM RESERVASI ---------- */
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.reservation-form label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.reservation-form input {
+    padding: 8px;
+    border: 1px solid #310606;
+}
+
+.reservation-form button {
+    padding: 10px;
+    border: none;
+    background-color: #ab9b9b;
+    color: #160f0f;
+    cursor: pointer;
+}
+
+.reservation-form button:hover {
+    background-color: #9b8b8b;
+}
+
+/* ---------- MULTIMEDIA ---------- */
+.promo-video {
+    border: 1px solid #140303;
+}
+
+/* ---------- FOOTER ---------- */
+.site-footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #bc8585;
+    border-top: 1px solid #cdb4b4;
+    font-size: 0.9rem;
+}
+/* RESPONSIVE DESIGN — MEDIA QUERY */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-list {
+        flex-direction: column;
+    }
+
+    .navbar {
+        gap: 8px;
+    }
+}
