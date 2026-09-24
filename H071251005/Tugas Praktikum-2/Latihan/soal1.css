@@ -1,0 +1,31 @@
+.parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.makan{
+    padding: 10px 15px 20px 25px;
+    background-color: blueviolet;
+    margin: 10px;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+.minum{
+    padding: 10px 15px 20px 25px;
+    background-color: aquamarine;
+    margin: 10px;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
