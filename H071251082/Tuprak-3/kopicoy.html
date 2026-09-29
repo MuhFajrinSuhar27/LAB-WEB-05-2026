@@ -1,0 +1,515 @@
+
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KOPICOY, tempat menikmati kopi berkualitas dan suasana nyaman di Makassar.">
+  <title>KOPICOY</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-stone text-stone-800 font-sans">
+  <header class="sticky top-0 z-50 shadow-sm backdrop-blur">
+    <nav class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-4 md:px-8">
+      <a href="#beranda" class="text-2xl font-bold tracking-wide text-amber-900">
+        KOPI<span class="text-amber-600">COY.</span>
+      </a>
+
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm font-semibold md:gap-8">
+        <a href="#beranda" class="transition duration-300 hover:text-amber-700 focus-visible:outline-2 focus-visible:outline-amber-700">Beranda</a>
+        <a href="#menu" class="transition duration-300 hover:text-amber-700 focus-visible:outline-2 focus-visible:outline-amber-700">Menu</a>
+        <a href="#layanan" class="transition duration-300 hover:text-amber-700 focus-visible:outline-2 focus-visible:outline-amber-700">Layanan</a>
+        <a href="#testimoni" class="transition duration-300 hover:text-amber-700 focus-visible:outline-2 focus-visible:outline-amber-700">Testimoni</a>
+        <a href="#kontak" class="transition duration-300 hover:text-amber-700 focus-visible:outline-2 focus-visible:outline-amber-700">Kontak</a>
+      </div>
+
+      <a href="#reservasi"
+         class="rounded-full bg-amber-800 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-amber-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-800">
+        Pesan Meja
+      </a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="beranda" class="max-w-6x mx-auto px-6 pt-16 pb-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center scroll-mt-18">
+
+    <div>
+        <h1 class="font-serif text-5xl md:text-6xl leading-tight text-stone-900">Kopi yang tenang, rasa yang jujur.</h1>
+        <p class="text-sm text-amber-700 mt-3">Kedai kopi, Makassar</p>
+        <p class="mt-6 text-stone-600 max-w-md leading-relaxed">Kopicoy menyeduh biji lokal pilihan dengan cara sederhana tanpa berisik, tanpa berlebihan. Tempat singgah untuk kerja, berbincang, atau sekadar diam sejenak.</p>
+
+        <div class="mt-8 flex flex-wrap gap-4">
+        <a href="#kontak" class="bg-amber-700 text-white rounded-lg px-6 py-3 hover:bg-amber-800 active:bg-amber-900">Pesan Sekarang</a>
+        <a href="#menu" class="border border-stone-300 rounded-lg px-6 py-3 hover:border-stone-900 active:bg-stone-100">Lihat Menu</a>
+        </div>
+    </div>
+    <div class="flex justify-center">
+        <img src="assets/images.jpg" alt="Logo Kopicoy">
+    </div>
+    </section>
+
+    <section id="menu" class="bg-amber-50 px-5 pt-8 pb-20 md:px-8 md:pt-10 md:pb-28 scroll-mt-18">
+      <div class="mx-auto max-w-7xl">
+        <div class="mx-auto mb-12 max-w-2xl text-center">
+          <span class="font-bold text-amber-700">MENU FAVORIT</span>
+          <h2 class="mt-3 text-4xl font-bold text-stone-900 md:text-4xl">
+            Temukan Hidangan Favoritmu
+          </h2>
+          <p class="mt-4 leading-relaxed text-stone-600">
+            Dari kopi klasik hingga minuman kekinian, tersedia pilihan
+            untuk menemani setiap suasana.
+          </p>
+        </div>
+
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+          <article class="group overflow-hidden rounded-3xl bg-white shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+            <div class="overflow-hidden">
+              <img
+                src="assets/espresso.jpg"
+                alt="Espresso"
+                class="h-64 w-full object-contain transition duration-500 group-hover:scale-105"
+              >
+            </div>
+            <div class="p-6">
+              <div class="mb-3 flex items-center justify-between gap-3">
+                <h3 class="text-2xl font-bold text-stone-900">Espresso</h3>
+                <span class="rounded-full bg-amber-100 px-3 py-1 text-sm font-bold text-amber-800">Rp18K</span>
+              </div>
+              <p class="mb-5 leading-relaxed text-stone-600">
+                Kopi pekat dengan aroma kuat dan karakter rasa yang khas.
+              </p>
+              <a href="#reservasi" class="font-bold text-amber-800 transition hover:text-amber-600">
+                Pesan Sekarang →
+              </a>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden rounded-3xl bg-white shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+            <div class="overflow-hidden">
+              <img
+              src="assets/iced_coffee.jpg"
+                alt="Iced coffee"
+                class="h-64 w-full object-contain transition duration-500 group-hover:scale-105"
+              >
+            </div>
+            <div class="p-6">
+              <div class="mb-3 flex items-center justify-between gap-3">
+                <h3 class="text-2xl font-bold text-stone-900">Iced Coffee</h3>
+                <span class="rounded-full bg-amber-100 px-3 py-1 text-sm font-bold text-amber-800">Rp22K</span>
+              </div>
+              <p class="mb-5 leading-relaxed text-stone-600">
+                Perpaduan kopi dan es yang menyegarkan untuk menemani harimu.
+              </p>
+              <a href="#reservasi" class="font-bold text-amber-800 transition hover:text-amber-600">
+                Pesan Sekarang →
+              </a>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden rounded-3xl bg-white shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+            <div class="overflow-hidden">
+              <img
+                src="assets/cappuccino.jpg"                
+                alt="Cappuccino"
+                class="h-64 w-full object-contain transition duration-500 group-hover:scale-105"
+              >
+            </div>
+            <div class="p-6">
+              <div class="mb-3 flex items-center justify-between gap-3">
+                <h3 class="text-2xl font-bold text-stone-900">Cappuccino</h3>
+                <span class="rounded-full bg-amber-100 px-3 py-1 text-sm font-bold text-amber-800">Rp25K</span>
+              </div>
+              <p class="mb-5 leading-relaxed text-stone-600">
+                Espresso dengan susu steamed dan foam lembut di atasnya.
+              </p>
+              <a href="#reservasi" class="font-bold text-amber-800 transition hover:text-amber-600">
+                Pesan Sekarang →
+              </a>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden rounded-3xl bg-white shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+            <div class="overflow-hidden">
+              <img
+            src="assets/chocolate_frappe.jpg"                
+            alt="Chocolate frappe"
+                class="h-64 w-full object-contain transition duration-500 group-hover:scale-105"
+              >
+            </div>
+            <div class="p-6">
+              <div class="mb-3 flex items-center justify-between gap-3">
+                <h3 class="text-2xl font-bold text-stone-900">Chocolate Frappe</h3>
+                <span class="rounded-full bg-amber-100 px-3 py-1 text-sm font-bold text-amber-800">Rp27K</span>
+              </div>
+              <p class="mb-5 leading-relaxed text-stone-600">
+                Minuman cokelat dingin dengan tekstur creamy dan rasa manis.
+              </p>
+              <a href="#reservasi" class="font-bold text-amber-800 transition hover:text-amber-600">
+                Pesan Sekarang →
+              </a>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden rounded-3xl bg-white shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+            <div class="overflow-hidden">
+              <img
+                src="assets/donut.jpg"                
+                alt="Donat"
+                class="h-64 w-full object-contain transition duration-500 group-hover:scale-105"
+              >
+            </div>
+            <div class="p-6">
+              <div class="mb-3 flex items-center justify-between gap-3">
+                <h3 class="text-2xl font-bold text-stone-900">Donat</h3>
+                <span class="rounded-full bg-amber-100 px-3 py-1 text-sm font-bold text-amber-800">Rp15K</span>
+              </div>
+              <p class="mb-5 leading-relaxed text-stone-600">
+                Camilan lembut dengan pilihan topping untuk teman minum kopi.
+              </p>
+              <a href="#reservasi" class="font-bold text-amber-800 transition hover:text-amber-600">
+                Pesan Sekarang →
+              </a>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden rounded-3xl bg-white shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+            <div class="overflow-hidden">
+              <img
+                src="assets/cookies.jpg"
+                alt="Cookies"
+                class="h-64 w-full object-contain transition duration-500 group-hover:scale-105"
+              >
+            </div>
+            <div class="p-6">
+              <div class="mb-3 flex items-center justify-between gap-3">
+                <h3 class="text-2xl font-bold text-stone-900">Cookies</h3>
+                <span class="rounded-full bg-amber-100 px-3 py-1 text-sm font-bold text-amber-800">Rp12K</span>
+              </div>
+              <p class="mb-5 leading-relaxed text-stone-600">
+                Biskuit panggang dengan tekstur renyah dan rasa yang nikmat.
+              </p>
+              <a href="#reservasi" class="font-bold text-amber-800 transition hover:text-amber-600">
+                Pesan Sekarang →
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="layanan" class="px-5 pt-8 pb-20 md:px-8 md:pt-10 md:pb-28 scroll-mt-18">
+      <div class="mx-auto max-w-7xl">
+        <div class="mx-auto mb-12 max-w-2xl text-center">
+          <span class="font-bold tracking-wide text-amber-700">LAYANAN KAMI</span>
+          <h2 class="mt-3 text-4xl font-bold text-stone-900 md:text-5xl">
+            Dibuat untuk Kenyamananmu
+          </h2>
+          <p class="mt-4 text-stone-600">
+            Nikmati berbagai fasilitas untuk membuat waktu berkumpul
+            semakin menyenangkan.
+          </p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="group overflow-hidden rounded-3xl border border-stone-200 bg-white text-center shadow-md transition duration-300 hover:-translate-y-2 hover:border-amber-400 hover:shadow-xl">
+            <div class="flex h-64 items-center justify-center overflow-hidden bg-white p-5">
+                <img 
+                src="assets/dine-in.png" 
+                alt="Dine In"
+                class="h-full w-full object-contain transition duration-500 group-hover:scale-105"
+                >
+            </div>
+            <div class="px-6 pb-8 pt-5">
+                <h3 class="mb-3 text-2xl font-bold">Dine In</h3>
+                <p class="leading-relaxed text-stone-900">
+                Nikmati kopi dan makanan langsung di tempat dengan suasana
+                yang nyaman dan santai.
+                </p>    
+            </div>
+            
+          </article>
+
+          <article class="group overflow-hidden rounded-3xl border border-stone-200 bg-white text-center shadow-md transition duration-300 hover:-translate-y-2 hover:border-amber-400 hover:shadow-xl">
+            <div class="flex h-64 items-center justify-center overflow-hidden bg-white p-5">
+                <img 
+                src="assets/free-wifi.jpg" 
+                alt="Free Wi-fi"
+                class="h-full w-full object-contain transition duration-500 group-hover:scale-105"
+                >
+            </div>
+            <div class="px-6 pb-8 pt-5">
+                <h3 class="mb-3 text-2xl font-bold">Free Wi-fi</h3>
+                <p class="leading-relaxed text-stone-900">
+                Cocok untuk belajar, bekerja, atau menyelesaikan tugas sambil menikmati minuman favorit.
+                </p>    
+            </div>
+            
+          </article>
+
+          <article class="group overflow-hidden rounded-3xl border border-stone-200 bg-white text-center shadow-md transition duration-300 hover:-translate-y-2 hover:border-amber-400 hover:shadow-xl">
+            <div class="flex h-64 items-center justify-center overflow-hidden bg-white p-5">
+                <img 
+                src="assets/take-away.png" 
+                alt="Take Away"
+                class="h-full w-full object-contain transition duration-500 group-hover:scale-105"
+                >
+            </div>
+            <div class="px-6 pb-8 pt-5">
+                <h3 class="mb-3 text-2xl font-bold">Take Away</h3>
+                <p class="leading-relaxed text-stone-900">
+                Bawa kopi favoritmu untuk dinikmati di rumah, kantor, atau saat bepergian.                
+                </p>    
+            </div>
+            
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimoni" class="bg-stone-900 text-white px-5 pt-8 pb-20 md:px-8 md:pt-10 md:pb-28 scroll-mt-18">
+      <div class="mx-auto max-w-7xl">
+        <div class="mx-auto mb-12 max-w-2xl text-center">
+          <span class="font-bold tracking-wide text-amber-300">TESTIMONI</span>
+          <h2 class="mt-3 text-4xl font-bold md:text-5xl">
+            Cerita dari Pelanggan
+          </h2>
+          <p class="mt-4 text-stone-300">
+            Contoh ulasan pelanggan untuk tampilan halaman.
+          </p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="rounded-3xl border border-white/10 bg-white/5 p-7">
+            <div class="mb-4 text-xl tracking-widest text-amber-300">★★★★★</div>
+            <p class="mb-6 leading-relaxed text-stone-200">
+              "Tempatnya cocok untuk nongkrong dan kerja tugas. Pilihan minumannya menarik."
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-amber-700 font-bold">R</div>
+              <div>
+                <h3 class="font-bold">Rafly</h3>
+                <p class="text-sm text-stone-400">Pelanggan</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="rounded-3xl border border-white/10 bg-white/5 p-7">
+            <div class="mb-4 text-xl tracking-widest text-amber-300">★★★★★</div>
+            <p class="mb-6 leading-relaxed text-stone-200">
+              "Kopinya enak dan suasananya hangat. Tempat yang pas untuk
+              berkumpul bersama teman."
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-amber-700 font-bold">D</div>
+              <div>
+                <h3 class="font-bold">Dika</h3>
+                <p class="text-sm text-stone-400">Pelanggan</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="rounded-3xl border border-white/10 bg-white/5 p-7">
+            <div class="mb-4 text-xl tracking-widest text-amber-300">★★★★★</div>
+            <p class="mb-6 leading-relaxed text-stone-200">
+              "Desain tempatnya menarik dan pelayanannya ramah.
+              Saya suka pilihan kopi dinginnya."
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-amber-700 font-bold">F</div>
+              <div>
+                <h3 class="font-bold">Fauzi</h3>
+                <p class="text-sm text-stone-400">Pelanggan</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="reservasi" class="bg-amber-50 px-5 py-16 md:px-8 md:py-20">
+      <div class="mx-auto grid max-w-7xl gap-12 md:grid-cols-2">
+        <div class="flex flex-col justify-center">
+          <span class="font-bold text-amber-700">RESERVASI</span>
+          <h2 class="mt-3 mb-6 text-4xl leading-tight font-bold text-stone-900 md:text-5xl">
+            Rencanakan Waktu Bersama Kami
+          </h2>
+          <p class="mb-8 leading-relaxed text-stone-600">
+            Ingin berkumpul bersama teman, keluarga, atau rekan kerja?
+            Isi formulir reservasi untuk mengajukan pemesanan meja.
+          </p>
+
+          <div class="space-y-5">
+            <div class="flex items-start gap-4">
+              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-amber-200 text-xl">📍</div>
+              <div>
+                <h3 class="font-bold text-stone-900">Lokasi</h3>
+                <p class="mt-1 text-stone-600">Makassar, Sulawesi Selatan</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-amber-200 text-xl">🕒</div>
+              <div>
+                <h3 class="font-bold text-stone-900">Jam Operasional</h3>
+                <p class="mt-1 text-stone-600">Setiap hari, 09.00–22.00 WITA</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-amber-200 text-xl">✉️</div>
+              <div>
+                <h3 class="font-bold text-stone-900">Email</h3>
+                <p class="mt-1 text-stone-600">kopicoy@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-3xl bg-white p-6 shadow-xl md:p-10">
+          <h3 class="mb-2 text-3xl font-bold text-stone-900">Formulir Reservasi</h3>
+          <p class="mb-8 text-sm text-stone-500">
+            Lengkapi informasi berikut.
+          </p>
+
+          <form action="#" method="get" class="space-y-5">
+            <div>
+              <label for="nama" class="mb-2 block text-sm font-semibold text-stone-700">Nama Lengkap</label>
+              <input
+                type="text"
+                id="nama"
+                name="nama"
+                placeholder="Masukkan nama lengkap"
+                required
+                class="w-full rounded-xl border border-stone-300 px-4 py-3 outline-none transition focus:border-amber-600 focus:ring-2 focus:ring-amber-200"
+              >
+            </div>
+
+            <div>
+              <label for="email" class="mb-2 block text-sm font-semibold text-stone-700">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="nama@email.com"
+                required
+                class="w-full rounded-xl border border-stone-300 px-4 py-3 outline-none transition focus:border-amber-600 focus:ring-2 focus:ring-amber-200"
+              >
+            </div>
+
+            <div>
+              <label for="telepon" class="mb-2 block text-sm font-semibold text-stone-700">Nomor Telepon</label>
+              <input
+                type="tel"
+                id="telepon"
+                name="telepon"
+                placeholder="08xxxxxxxxxx"
+                class="w-full rounded-xl border border-stone-300 px-4 py-3 outline-none transition focus:border-amber-600 focus:ring-2 focus:ring-amber-200"
+              >
+            </div>
+
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label for="tanggal" class="mb-2 block text-sm font-semibold text-stone-700">Tanggal</label>
+                <input
+                  type="date"
+                  id="tanggal"
+                  name="tanggal"
+                  required
+                  class="w-full rounded-xl border border-stone-300 px-4 py-3 outline-none transition focus:border-amber-600 focus:ring-2 focus:ring-amber-200"
+                >
+              </div>
+
+              <div>
+                <label for="jumlah" class="mb-2 block text-sm font-semibold text-stone-700">Jumlah Orang</label>
+                <select
+                  id="jumlah"
+                  name="jumlah"
+                  required
+                  class="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 outline-none transition focus:border-amber-600 focus:ring-2 focus:ring-amber-200"
+                >
+                  <option value="">Pilih</option>
+                  <option value="1">1 orang</option>
+                  <option value="2">2 orang</option>
+                  <option value="3">3 orang</option>
+                  <option value="4">4 orang</option>
+                  <option value="5">5 orang</option>
+                  <option value="6">6 orang atau lebih</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="pesan" class="mb-2 block text-sm font-semibold text-stone-700">Catatan Tambahan</label>
+              <textarea
+                id="pesan"
+                name="pesan"
+                rows="4"
+                placeholder="Tulis permintaan khusus jika ada..."
+                class="w-full resize-y rounded-xl border border-stone-300 px-4 py-3 outline-none transition focus:border-amber-600 focus:ring-2 focus:ring-amber-200"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full rounded-xl bg-amber-800 px-6 py-4 font-bold text-white transition hover:bg-amber-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-800"
+            >
+              Kirim Reservasi
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="kontak" class="bg-stone-950 px-5 pt-16 pb-8 text-stone-300 md:px-8">
+    <div class="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="lg:col-span-2">
+        <a href="#beranda" class="text-3xl font-bold text-amber-900">
+          KOPI<span class="text-amber-600">COY.</span>
+        </a>
+        <p class="mt-5 max-w-md leading-relaxed text-stone-400">
+          Tempat menikmati kopi, berbagi cerita, dan menciptakan
+          momen berharga. Temukan pengalaman ngopi yang menyenangkan
+          bersama KOPICOY di Makassar.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="mb-5 text-xl font-bold text-white">Navigasi</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#beranda" class="transition hover:text-amber-400">Beranda</a></li>
+          <li><a href="#menu" class="transition hover:text-amber-400">Menu</a></li>
+          <li><a href="#layanan" class="transition hover:text-amber-400">Layanan</a></li>
+          <li><a href="#reservasi" class="transition hover:text-amber-400">Reservasi</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="mb-5 text-xl font-bold text-white">Hubungi Kami</h3>
+        <ul class="space-y-3 text-sm text-stone-400">
+          <li>📍 Makassar, Sulawesi Selatan</li>
+          <li>🕒 Setiap hari, 09.00–22.00 WITA</li>
+          <li>✉️ kopicoy@gmail.com</li>
+        </ul>
+        <div class="mt-5 flex gap-3">
+          <a href="#kontak" aria-label="Instagram" class="flex h-10 w-10 items-center justify-center rounded-full bg-stone-800 transition hover:bg-amber-700">IG</a>
+          <a href="#kontak" aria-label="Facebook" class="flex h-10 w-10 items-center justify-center rounded-full bg-stone-800 transition hover:bg-amber-700">FB</a>
+          <a href="#kontak" aria-label="TikTok" class="flex h-10 w-10 items-center justify-center rounded-full bg-stone-800 transition hover:bg-amber-700">TK</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mx-auto mt-12 max-w-7xl border-t border-stone-800 pt-6 text-center text-sm text-stone-500">
+      <p>© 2026 KOPICOY Coffee Shop. Tugas Praktikum 3. Semua Hak Cipta Dilindungi.</p>
+    </div>
+  </footer>
+</body>
+</html>
