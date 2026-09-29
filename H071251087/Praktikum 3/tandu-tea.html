@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Tandu Tea</title>
+</head>
+<body class="text-black">
+
+<!-- 1. NAVBAR -->
+<nav class="bg-yellow-400 border-b-4 border-black sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+    <a href="#beranda"><img src="tandu-tea-logo.png" alt="Logo Tandu Tea" class="h-10 mix-blend-multiply"></a>
+    <div class="flex gap-4 md:gap-8 text-xs md:text-sm font-bold uppercase">
+      <a href="#beranda" class="hover:text-white">Beranda</a>
+      <a href="#tentang" class="hover:text-white">Tentang</a>
+      <a href="#menu" class="hover:text-white">Menu</a>
+      <a href="#pesan" class="hover:text-white">Pesan</a>
+    </div>
+  </div>
+</nav>
+
+<!-- 2. HEADER + HERO -->
+<section id="beranda" class="bg-yellow-400 py-16 border-b-4 border-black">
+  <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
+    <div class="flex-1 text-center md:text-left">
+      <h1 class="text-4xl lg:text-6xl font-black uppercase mb-4">Nikmati Kesegaran Dalam Setiap Tegukan</h1>
+      <p class="text-lg mb-8">Varian minuman teh hingga non-teh dengan bahan berkualitas. Rasa otentik untuk menemani setiap momenmu.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+        <a href="#menu" class="bg-black text-white font-bold px-8 py-3 rounded-full hover:bg-neutral-800">Lihat Menu</a>
+        <a href="#pesan" class="bg-white font-bold px-8 py-3 rounded-full border-2 border-black">Pesan Sekarang</a>
+      </div>
+    </div>
+    <img src="beranda-kuning-fix-hd.png" alt="Minuman Tandu Tea" class="flex-1 w-full max-w-md">
+  </div>
+</section>
+
+<!-- 3. TENTANG -->
+<section id="tentang" class="py-16 border-b-4 border-black">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-black uppercase mb-4">Tentang Tandu Tea</h2>
+    <p class="text-neutral-700 font-medium">
+      Tandu Tea menghadirkan pengalaman minum yang modern, segar, dan kaya rasa: mulai dari racikan teh, cokelat pekat, taro, red velvet, hingga kopi susu gula aren dengan topping melimpah.
+    </p>
+  </div>
+</section>
+
+<!-- 4. MENU (GRID) -->
+<section id="menu" class="bg-neutral-100 py-16 border-b-4 border-black">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-black uppercase text-center mb-10">Menu & Harga</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded-2xl border-4 border-black">
+        <h3 class="text-2xl font-black bg-amber-400 inline-block px-3 rounded-lg mb-3">Rp10.000</h3>
+        <p class="font-semibold">Green Tea, Thai Tea, Red Velvet, Lemon Tea, Chocolate</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl border-4 border-black">
+        <h3 class="text-2xl font-black bg-amber-400 inline-block px-3 rounded-lg mb-3">Rp13.000</h3>
+        <p class="font-semibold">Taro, Mojito Mint, Dark Chocolate, Tiramisu, Dark Mocha, Matcha Latte</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl border-4 border-black">
+        <h3 class="text-2xl font-black bg-amber-400 inline-block px-3 rounded-lg mb-3">Rp15.000</h3>
+        <p class="font-semibold">Brown Sugar Boba Milk, Kopi Susu Gula Aren, Coconutpresso</p>
+      </div>
+    </div>
+    <p class="text-center font-bold mt-8">Extra topping: Boba, Egg Pudding, Grass Jelly (+Rp3.000) • Cheese Foam (+Rp4.000)</p>
+  </div>
+</section>
+
+<!-- 5. FORM PESAN (tampilan saja) -->
+<section id="pesan" class="py-16 border-b-4 border-black">
+  <div class="max-w-xl mx-auto px-4">
+    <h2 class="text-3xl font-black uppercase text-center mb-8">Pesan Sekarang</h2>
+    <form onsubmit="return false" class="space-y-4">
+      <input type="text" placeholder="Nama lengkap" class="w-full p-3 rounded-xl border-2 border-black">
+      <input type="tel" placeholder="Nomor WhatsApp" class="w-full p-3 rounded-xl border-2 border-black">
+      <textarea placeholder="Alamat & catatan pesanan" rows="3" class="w-full p-3 rounded-xl border-2 border-black"></textarea>
+      <button type="submit" class="w-full bg-black text-white font-black py-3 rounded-xl uppercase hover:bg-neutral-800">Kirim Pesanan</button>
+    </form>
+  </div>
+</section>
+
+<!-- 6. FOOTER -->
+<footer class="bg-black text-white py-10 text-center text-sm">
+  <p class="mb-2">Kontak: 0812-4111-8286 • Jl. Danau Matano, Sorowako</p>
+  <p class="mb-4 space-x-4">
+    <a href="#" class="hover:text-yellow-400">Instagram</a>
+    <a href="#" class="hover:text-yellow-400">WhatsApp</a>
+    <a href="#" class="hover:text-yellow-400">TikTok</a>
+  </p>
+  <p class="text-neutral-500">&copy; 2026 Tandu Tea - Nur Aisyah AT • <a href="#" class="hover:text-yellow-400">Kebijakan Privasi.</a></p>
+</footer>
+
+</body>
+</html>
