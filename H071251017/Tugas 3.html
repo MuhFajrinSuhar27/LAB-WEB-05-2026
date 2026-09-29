@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sangrai Pagi | Langganan Kopi Sangrai Nusantara</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-stone-50 font-['Inter',sans-serif] text-stone-800 antialiased">
+
+  <!-- 1. NAVBAR -->
+  <nav class="sticky top-0 z-50 border-b border-teal-900 bg-teal-950/95 text-stone-100 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <a href="#beranda" class="font-['Fraunces',serif] text-xl font-extrabold text-amber-300">Sangrai Pagi</a>
+      <ul class="hidden items-center gap-8 text-sm font-medium md:flex">
+        <li><a href="#beranda" class="hover:text-amber-300">Beranda</a></li>
+        <li><a href="#tentang" class="hover:text-amber-300">Tentang</a></li>
+        <li><a href="#layanan" class="hover:text-amber-300">Layanan</a></li>
+        <li><a href="#testimoni" class="hover:text-amber-300">Testimoni</a></li>
+        <li><a href="#kontak" class="rounded-full bg-amber-300 px-5 py-2 text-teal-950 hover:bg-amber-200">Kontak</a></li>
+      </ul>
+      <details class="relative md:hidden">
+        <summary class="cursor-pointer list-none rounded-lg border border-teal-700 px-3 py-2 text-sm">Menu</summary>
+        <ul class="absolute right-0 mt-3 w-44 space-y-1 rounded-xl border border-teal-800 bg-teal-950 p-3 text-sm shadow-xl">
+          <li><a href="#beranda" class="block rounded-lg px-3 py-2 hover:bg-teal-900">Beranda</a></li>
+          <li><a href="#tentang" class="block rounded-lg px-3 py-2 hover:bg-teal-900">Tentang</a></li>
+          <li><a href="#layanan" class="block rounded-lg px-3 py-2 hover:bg-teal-900">Layanan</a></li>
+          <li><a href="#testimoni" class="block rounded-lg px-3 py-2 hover:bg-teal-900">Testimoni</a></li>
+          <li><a href="#kontak" class="block rounded-lg px-3 py-2 hover:bg-teal-900">Kontak</a></li>
+        </ul>
+      </details>
+    </div>
+  </nav>
+
+  <!-- 2. HEADER -->
+  <header class="bg-teal-950 px-6 pt-16 pb-10 text-center text-stone-100">
+    <h1 class="mx-auto max-w-3xl font-['Fraunces',serif] text-4xl font-extrabold leading-tight sm:text-6xl">Kopi sangrai segar, tiba di depan pintu Anda.</h1>
+    <p class="mx-auto mt-5 max-w-xl text-lg text-teal-100">Langganan biji kopi dari petani Toraja, Gayo, dan Flores. Disangrai minggu ini, bukan bulan lalu.</p>
+  </header>
+
+  <!-- 3. HERO -->
+  <section id="beranda" class="bg-teal-950 px-6 pb-20 text-stone-100">
+    <div class="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-2">
+      <div>
+        <p class="text-stone-300">Pilih biji, pilih takaran, kami sangrai dan kirim setiap dua minggu. Berhenti kapan saja tanpa biaya.</p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#kontak" class="rounded-full bg-amber-300 px-7 py-3 font-semibold text-teal-950 shadow-lg hover:bg-amber-200">Mulai Berlangganan</a>
+          <a href="#layanan" class="rounded-full border border-teal-600 px-7 py-3 font-semibold hover:bg-teal-900">Lihat Paket</a>
+        </div>
+        <dl class="mt-10 flex gap-10">
+          <div><dt class="text-sm text-teal-200">Petani mitra</dt><dd class="font-['Fraunces',serif] text-3xl font-extrabold text-amber-300">48</dd></div>
+          <div><dt class="text-sm text-teal-200">Pelanggan aktif</dt><dd class="font-['Fraunces',serif] text-3xl font-extrabold text-amber-300">2.300</dd></div>
+        </dl>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="col-span-2 flex h-40 items-end rounded-3xl bg-gradient-to-br from-amber-700 to-amber-950 p-5"><span class="font-['Fraunces',serif] text-2xl font-extrabold text-amber-100">Sangrai Medium</span></div>
+        <div class="flex h-32 items-end rounded-3xl bg-gradient-to-br from-emerald-600 to-teal-800 p-4 text-sm font-semibold">Gayo, Aceh</div>
+        <div class="flex h-32 items-end rounded-3xl bg-gradient-to-br from-stone-500 to-stone-800 p-4 text-sm font-semibold">Toraja, Sulawesi</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. TENTANG -->
+  <section id="tentang" class="mx-auto max-w-4xl px-6 py-20 text-center">
+    <h2 class="font-['Fraunces',serif] text-3xl font-extrabold text-teal-950 sm:text-4xl">Tentang Sangrai Pagi</h2>
+    <p class="mt-6 text-lg leading-relaxed text-stone-600">Sangrai Pagi berdiri agar kopi lokal berkualitas mudah dinikmati di rumah. Kami membeli langsung dari petani dengan harga adil, menyangrai dalam batch kecil, lalu mengirimnya dalam 48 jam. Hasilnya: aroma penuh, rasa jujur, dan petani ikut sejahtera.</p>
+  </section>
+
+  <!-- 5. FITUR / LAYANAN (grid) -->
+  <section id="layanan" class="bg-amber-100 px-6 py-20">
+    <div class="mx-auto max-w-6xl">
+      <h2 class="text-center font-['Fraunces',serif] text-3xl font-extrabold text-teal-950 sm:text-4xl">Kenapa berlangganan?</h2>
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <article class="rounded-2xl bg-white p-6 shadow-sm"><p class="text-3xl">🔥</p><h3 class="mt-4 font-semibold text-teal-950">Disangrai saat dipesan</h3><p class="mt-2 text-sm text-stone-600">Tidak ada stok gudang. Setiap paket disangrai untuk Anda.</p></article>
+        <article class="rounded-2xl bg-white p-6 shadow-sm"><p class="text-3xl">🌱</p><h3 class="mt-4 font-semibold text-teal-950">Langsung dari petani</h3><p class="mt-2 text-sm text-stone-600">Asal biji tercatat jelas di setiap kemasan.</p></article>
+        <article class="rounded-2xl bg-white p-6 shadow-sm"><p class="text-3xl">⚙️</p><h3 class="mt-4 font-semibold text-teal-950">Giling sesuai alat seduh</h3><p class="mt-2 text-sm text-stone-600">French press, V60, atau espresso, tinggal pilih.</p></article>
+        <article class="rounded-2xl bg-white p-6 shadow-sm"><p class="text-3xl">⏸️</p><h3 class="mt-4 font-semibold text-teal-950">Jeda atau berhenti bebas</h3><p class="mt-2 text-sm text-stone-600">Atur jadwal kirim kapan saja, tanpa denda.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. TESTIMONI -->
+  <section id="testimoni" class="mx-auto max-w-6xl px-6 py-20">
+    <h2 class="text-center font-['Fraunces',serif] text-3xl font-extrabold text-teal-950 sm:text-4xl">Kata mereka</h2>
+    <div class="mt-12 grid gap-6 md:grid-cols-3">
+      <figure class="rounded-2xl border border-stone-200 bg-white p-6"><blockquote class="text-stone-700">"Aroma kopinya beda sekali dibanding kopi supermarket. Pagi saya jadi lebih semangat."</blockquote><figcaption class="mt-4 text-sm font-semibold text-teal-900">Rina, Makassar</figcaption></figure>
+      <figure class="rounded-2xl border border-stone-200 bg-white p-6"><blockquote class="text-stone-700">"Pengiriman selalu tepat waktu, dan saya bisa ganti jenis biji tiap bulan."</blockquote><figcaption class="mt-4 text-sm font-semibold text-teal-900">Dimas, Surabaya</figcaption></figure>
+      <figure class="rounded-2xl border border-stone-200 bg-white p-6"><blockquote class="text-stone-700">"Suka karena tahu kopinya dari petani mana. Rasanya jujur dan konsisten."</blockquote><figcaption class="mt-4 text-sm font-semibold text-teal-900">Alya, Bandung</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- 7. FORM -->
+  <section id="kontak" class="bg-teal-950 px-6 py-20 text-stone-100">
+    <div class="mx-auto max-w-xl">
+      <h2 class="text-center font-['Fraunces',serif] text-3xl font-extrabold sm:text-4xl">Mulai paket pertama Anda</h2>
+      <p class="mt-3 text-center text-teal-100">Isi data berikut, kami hubungi dalam 1 hari kerja.</p>
+      <form class="mt-10 space-y-5 rounded-3xl bg-teal-900 p-8">
+        <div><label for="nama" class="mb-1 block text-sm font-medium">Nama lengkap</label><input id="nama" type="text" placeholder="Nama Anda" class="w-full rounded-lg border border-teal-700 bg-teal-950 px-4 py-3 text-stone-100 placeholder-teal-400 focus:outline-none focus:ring-2 focus:ring-amber-300"></div>
+        <div><label for="email" class="mb-1 block text-sm font-medium">Email</label><input id="email" type="email" placeholder="nama@email.com" class="w-full rounded-lg border border-teal-700 bg-teal-950 px-4 py-3 text-stone-100 placeholder-teal-400 focus:outline-none focus:ring-2 focus:ring-amber-300"></div>
+        <div><label for="paket" class="mb-1 block text-sm font-medium">Pilihan paket</label>
+          <select id="paket" class="w-full rounded-lg border border-teal-700 bg-teal-950 px-4 py-3 text-stone-100 focus:outline-none focus:ring-2 focus:ring-amber-300">
+            <option>250 gram, dua mingguan</option><option>500 gram, dua mingguan</option><option>1 kg, bulanan</option>
+          </select></div>
+        <div><label for="pesan" class="mb-1 block text-sm font-medium">Catatan</label><textarea id="pesan" rows="3" placeholder="Alat seduh atau preferensi rasa" class="w-full rounded-lg border border-teal-700 bg-teal-950 px-4 py-3 text-stone-100 placeholder-teal-400 focus:outline-none focus:ring-2 focus:ring-amber-300"></textarea></div>
+        <button type="button" class="w-full rounded-full bg-amber-300 py-3 font-semibold text-teal-950 hover:bg-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-100">Daftar Sekarang</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 8. FOOTER -->
+  <footer class="bg-stone-900 px-6 py-12 text-sm text-stone-400">
+    <div class="mx-auto grid max-w-6xl gap-8 md:grid-cols-3">
+      <div><p class="font-['Fraunces',serif] text-lg font-extrabold text-amber-300">Sangrai Pagi</p><p class="mt-2">Kopi sangrai segar dari petani Nusantara.</p></div>
+      <div><p class="font-semibold text-stone-200">Kontak</p><p class="mt-2">halo@sangraipagi.id<br>+62 812 0000 0000<br>Jl. Kopi No. 1, Indonesia</p></div>
+      <div><p class="font-semibold text-stone-200">Media sosial</p><p class="mt-2 flex gap-4"><a href="#" class="hover:text-amber-300">Instagram</a><a href="#" class="hover:text-amber-300">TikTok</a><a href="#" class="hover:text-amber-300">YouTube</a></p></div>
+    </div>
+    <div class="mx-auto mt-10 flex max-w-6xl flex-col justify-between gap-2 border-t border-stone-700 pt-6 sm:flex-row">
+      <p>&copy; 2026 Sangrai Pagi. Hak cipta dilindungi.</p>
+      <p class="flex gap-4"><a href="#" class="hover:text-amber-300">Kebijakan Privasi</a><a href="#" class="hover:text-amber-300">Syarat &amp; Ketentuan</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
