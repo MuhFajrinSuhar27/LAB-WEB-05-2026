@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HEALORA — Small Habits, Better Days.</title>
+<meta name="description" content="HEALORA membantu kamu membangun kebiasaan hidup sehat sehari-hari: pola makan seimbang, hidrasi, gerak, dan tidur yang cukup." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          serif: ['Fraunces', 'serif'],
+          sans: ['Inter', 'sans-serif'],
+        },
+        colors: {
+          cream: '#FBF7EF',
+          sand: '#F1E9D8',
+          sage: {
+            50: '#F1F5F0',
+            100: '#DCE6DA',
+            300: '#A9C1A6',
+            500: '#7A9977',
+            600: '#5C7F58',
+            700: '#456144',
+          },
+          clay: {
+            400: '#E3A45E',
+            500: '#D18F45',
+            600: '#B4762F',
+          },
+          ink: '#2B342B',
+        },
+      },
+    },
+  };
+</script>
+</head>
+
+<body class="bg-cream text-ink font-sans antialiased bg">
+
+<header class="sticky top-0 z-50 bg-cream/95 backdrop-blur border-b border-sage-100 shadow-sm">
+  <nav class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 md:h-20">
+
+      
+      <a href="#home" class="font-serif text-2xl font-semibold text-sage-700 tracking-tight">
+        HEALORA
+      </a>
+
+      
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-ink/70">
+        <a href="#home" class="hover:text-sage-700 transition duration-200">Home</a>
+        <a href="#about" class="hover:text-sage-700 transition duration-200">About</a>
+        <a href="#benefits" class="hover:text-sage-700 transition duration-200">Benefits</a>
+        <a href="#tips" class="hover:text-sage-700 transition duration-200">Tips</a>
+        <a href="#contact" class="hover:text-sage-700 transition duration-200">Contact</a>
+      </div>
+
+     
+      <a href="#contact"
+         class="hidden md:inline-block bg-sage-600 hover:bg-sage-700 text-cream px-5 py-2.5 rounded-full text-sm font-medium transition duration-300 shadow-sm hover:shadow-md">
+        Start Healthy
+      </a>
+
+      <button id="menuBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu"
+              class="md:hidden inline-flex flex-col justify-center gap-1.5 p-2">
+        <span class="w-6 h-0.5 bg-ink"></span>
+        <span class="w-6 h-0.5 bg-ink"></span>
+        <span class="w-6 h-0.5 bg-ink"></span>
+      </button>
+    </div>
+
+
+    <div id="mobileMenu" class="hidden md:hidden pb-6 flex flex-col gap-4 text-sm font-medium text-ink/80">
+      <a href="#home" class="hover:text-sage-700 transition">Home</a>
+      <a href="#about" class="hover:text-sage-700 transition">About</a>
+      <a href="#benefits" class="hover:text-sage-700 transition">Benefits</a>
+      <a href="#tips" class="hover:text-sage-700 transition">Tips</a>
+      <a href="#contact" class="hover:text-sage-700 transition">Contact</a>
+      <a href="#contact"
+         class="bg-sage-600 hover:bg-sage-700 text-cream px-5 py-2.5 rounded-full text-center transition duration-300">
+        Start Healthy
+      </a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section id="home" class="max-w-3xl mx-auto text-center px-6 pt-16 md:pt-24 pb-10">
+    <p class="font-serif text-3xl md:text-4xl text-sage-700 mb-3">HEALORA</p>
+    <h1 class="font-serif text-2xl md:text-3xl font-medium text-ink mb-4">Small Habits, Better Days.</h1>
+    <p class="text-ink/60 text-base md:text-lg leading-relaxed">
+      Temukan kebiasaan sederhana yang bisa membantu membuat keseharianmu terasa lebih seimbang.
+    </p>
+  </section>
+
+
+  <section class="max-w-7xl mx-auto px-6 lg:px-8 py-10 md:py-16">
+    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+
+      <div class="w-full lg:w-1/2">
+        <span class="inline-block text-xs font-semibold tracking-widest text-clay-600 mb-4">
+          YOUR DAILY WELLNESS GUIDE
+        </span>
+        <h2 class="font-serif text-4xl md:text-5xl leading-tight text-ink mb-6">
+          Feel Better, One Small Habit at a Time.
+        </h2>
+        <p class="text-ink/60 text-base md:text-lg leading-relaxed mb-8 max-w-md">
+          Healora menemani langkah kecilmu menuju hari yang lebih seimbang — mulai dari makan,
+          bergerak, minum air, hingga istirahat yang cukup.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#tips"
+             class="bg-sage-600 hover:bg-sage-700 text-cream px-6 py-3 rounded-full font-medium transition duration-300 shadow-sm hover:shadow-md">
+            Explore Healthy Tips
+          </a>
+          <a href="#about"
+             class="border border-ink/20 hover:border-sage-600 hover:text-sage-700 px-6 py-3 rounded-full font-medium transition duration-300">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <div class="w-full lg:w-1/2 relative">
+        <div class="absolute -top-6 -right-6 w-40 h-40 bg-sage-100 rounded-full -z-10"></div>
+        <div class="absolute -bottom-8 -left-6 w-28 h-28 bg-clay-400/20 rounded-full -z-10"></div>
+        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=900&q=80"
+             alt="Semangkuk makanan sehat dengan sayuran dan buah segar"
+             class="w-full h-[420px] object-cover rounded-3xl shadow-xl" />
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about" class="bg-sand/60 py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+
+        <div class="w-full lg:w-1/2">
+          <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80"
+               alt="Seseorang menyiapkan sarapan sehat di dapur pada pagi hari"
+               class="w-full h-[380px] object-cover rounded-3xl shadow-lg" />
+        </div>
+
+        <div class="w-full lg:w-1/2">
+          <h2 class="font-serif text-3xl md:text-4xl text-ink mb-5 leading-snug">
+            Wellness Doesn't Have to Be Complicated.
+          </h2>
+          <p class="text-ink/60 text-base md:text-lg leading-relaxed mb-6 max-w-lg">
+            Healora membantu kamu menemukan kebiasaan sederhana yang bisa diterapkan dalam
+            keseharian, tanpa aturan yang rumit atau target yang membebani. Cukup satu langkah
+            kecil setiap hari.
+          </p>
+
+          <div class="flex items-center gap-4 mb-8">
+            <span class="font-serif text-4xl text-clay-600">5</span>
+            <span class="text-sm text-ink/60 leading-tight">
+              Daily Wellness<br />Principles
+            </span>
+          </div>
+
+          <a href="#benefits"
+             class="inline-block bg-ink text-cream hover:bg-sage-700 px-6 py-3 rounded-full font-medium transition duration-300">
+            Discover Our Approach
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="benefits" class="max-w-7xl mx-auto px-6 lg:px-8 py-16 md:py-24">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <h2 class="font-serif text-3xl md:text-4xl text-ink">Simple Habits. Meaningful Changes.</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-lg p-6 transition duration-300 hover:-translate-y-2">
+        <svg class="w-9 h-9 text-sage-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v3m7.5-3v3M4.5 8.25h15M6 21h12a1.5 1.5 0 001.5-1.5V9A1.5 1.5 0 0018 7.5H6A1.5 1.5 0 004.5 9v10.5A1.5 1.5 0 006 21z" />
+        </svg>
+        <h3 class="font-serif text-lg text-ink mb-2">Balanced Meals</h3>
+        <p class="text-sm text-ink/60 leading-relaxed">Pelajari cara membangun pola makan yang lebih seimbang.</p>
+      </div>
+
+  
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-lg p-6 transition duration-300 hover:-translate-y-2">
+        <svg class="w-9 h-9 text-sage-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3s6 6.5 6 11a6 6 0 11-12 0c0-4.5 6-11 6-11z" />
+        </svg>
+        <h3 class="font-serif text-lg text-ink mb-2">Stay Hydrated</h3>
+        <p class="text-sm text-ink/60 leading-relaxed">Jadikan hidrasi sebagai bagian dari rutinitas harian.</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-lg p-6 transition duration-300 hover:-translate-y-2">
+        <svg class="w-9 h-9 text-sage-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L18 9m0 0l-8.5 8.5-4 1 1-4L15 5.5m3 3.5l-3-3M4.5 19.5h15" />
+        </svg>
+        <h3 class="font-serif text-lg text-ink mb-2">Move More</h3>
+        <p class="text-sm text-ink/60 leading-relaxed">Tambahkan aktivitas fisik ringan ke dalam keseharian.</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-lg p-6 transition duration-300 hover:-translate-y-2">
+        <svg class="w-9 h-9 text-sage-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+        </svg>
+        <h3 class="font-serif text-lg text-ink mb-2">Better Sleep</h3>
+        <p class="text-sm text-ink/60 leading-relaxed">Bangun rutinitas tidur yang lebih konsisten.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="tips" class="bg-sand/60 py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="font-serif text-3xl md:text-4xl text-ink">Daily Wellness Tips</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <article class="bg-white rounded-2xl shadow-sm hover:shadow-lg overflow-hidden transition duration-300 group">
+          <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=700&q=80"
+               alt="Sarapan sehat dengan oat, buah, dan yogurt"
+               class="w-full h-48 object-cover group-hover:scale-105 transition duration-500" />
+          <div class="p-6">
+            <span class="text-xs font-semibold tracking-widest text-clay-600">NUTRITION</span>
+            <h3 class="font-serif text-xl text-ink mt-2 mb-3">Build a Better Breakfast</h3>
+            <p class="text-sm text-ink/60 leading-relaxed mb-4">
+              Awali hari dengan kombinasi karbohidrat, protein, dan serat yang membuatmu kenyang lebih lama.
+            </p>
+            <a href="#" class="text-sage-700 text-sm font-medium hover:text-sage-600 transition">Read More →</a>
+          </div>
+        </article>
+
+        <!-- Tip 2 -->
+        <article class="bg-white rounded-2xl shadow-sm hover:shadow-lg overflow-hidden transition duration-300 group">
+          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=700&q=80"
+               alt="Seseorang berjalan santai di luar ruangan setelah makan"
+               class="w-full h-48 object-cover group-hover:scale-105 transition duration-500" />
+          <div class="p-6">
+            <span class="text-xs font-semibold tracking-widest text-clay-600">MOVEMENT</span>
+            <h3 class="font-serif text-xl text-ink mt-2 mb-3">Move After Meals</h3>
+            <p class="text-sm text-ink/60 leading-relaxed mb-4">
+              Jalan santai 10–15 menit setelah makan dapat membantu tubuh terasa lebih ringan.
+            </p>
+            <a href="#" class="text-sage-700 text-sm font-medium hover:text-sage-600 transition">Read More →</a>
+          </div>
+        </article>
+
+        <!-- Tip 3 -->
+        <article class="bg-white rounded-2xl shadow-sm hover:shadow-lg overflow-hidden transition duration-300 group">
+          <img src="https://images.unsplash.com/photo-1487956382158-bb926046304a?auto=format&fit=crop&w=700&q=80"
+               alt="Suasana kamar tidur yang tenang dan nyaman di malam hari"
+               class="w-full h-48 object-cover group-hover:scale-105 transition duration-500" />
+          <div class="p-6">
+            <span class="text-xs font-semibold tracking-widest text-clay-600">REST</span>
+            <h3 class="font-serif text-xl text-ink mt-2 mb-3">Create a Better Evening Routine</h3>
+            <p class="text-sm text-ink/60 leading-relaxed mb-4">
+              Rutinitas malam yang tenang membantu tubuh bersiap untuk tidur yang lebih berkualitas.
+            </p>
+            <a href="#" class="text-sage-700 text-sm font-medium hover:text-sage-600 transition">Read More →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="bg-sage-700 py-16 md:py-20">
+    <div class="max-w-3xl mx-auto text-center px-6">
+      <h2 class="font-serif text-3xl md:text-4xl text-cream mb-4">Ready to Make Your Days Feel Better?</h2>
+      <p class="text-sage-100 text-base md:text-lg mb-8">Start with one small habit today.</p>
+      <a href="#contact"
+         class="inline-block bg-clay-500 hover:bg-clay-600 text-white px-8 py-3.5 rounded-full font-medium transition duration-300 shadow-md hover:shadow-lg">
+        Start Your Journey
+      </a>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-6 lg:px-8 py-16 md:py-24">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <h2 class="font-serif text-3xl md:text-4xl text-ink">What People Say</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <p class="text-ink/70 text-sm leading-relaxed mb-4">
+          "A simple and beautiful way to remind myself to take better care of my daily routine."
+        </p>
+        <p class="font-serif text-sage-700">— Alya</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <p class="text-ink/70 text-sm leading-relaxed mb-4">
+          "Saya suka karena tipsnya sederhana dan mudah diterapkan."
+        </p>
+        <p class="font-serif text-sage-700">— Raka</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <p class="text-ink/70 text-sm leading-relaxed mb-4">
+          "Healora membuat kebiasaan sehat terasa lebih realistis."
+        </p>
+        <p class="font-serif text-sage-700">— Nadia</p>
+      </div>
+
+    </div>
+  </section>
+
+  
+  <section id="contact" class="bg-sand/60 py-16 md:py-24">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <h2 class="font-serif text-3xl md:text-4xl text-ink mb-3">Get Healthy Tips in Your Inbox.</h2>
+      <p class="text-ink/60 mb-10">Satu email singkat setiap minggu, isinya kebiasaan sehat yang mudah dicoba.</p>
+
+      <form class="bg-white rounded-2xl shadow-sm p-6 md:p-8 text-left" onsubmit="return false;">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+          <div>
+            <label for="name" class="block text-sm font-medium text-ink/70 mb-1.5">Name</label>
+            <input type="text" id="name" name="name" placeholder="Nama kamu"
+                   class="w-full border border-ink/15 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-sage-300 focus:border-sage-500 transition duration-200" />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-ink/70 mb-1.5">Email</label>
+            <input type="email" id="email" name="email" placeholder="nama@email.com"
+                   class="w-full border border-ink/15 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-sage-300 focus:border-sage-500 transition duration-200" />
+          </div>
+        </div>
+
+        <div class="mb-5">
+          <label for="topic" class="block text-sm font-medium text-ink/70 mb-1.5">Topic of Interest</label>
+          <select id="topic" name="topic"
+                  class="w-full border border-ink/15 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-sage-300 focus:border-sage-500 transition duration-200 bg-white">
+            <option>Balanced Meals</option>
+            <option>Hydration</option>
+            <option>Movement</option>
+            <option>Sleep &amp; Rest</option>
+          </select>
+        </div>
+
+        <div class="flex items-center gap-2 mb-6">
+          <input type="checkbox" id="agree" name="agree"
+                 class="w-4 h-4 rounded border-ink/25 text-sage-600 focus:ring-sage-300" />
+          <label for="agree" class="text-sm text-ink/60">Saya setuju menerima email dari Healora.</label>
+        </div>
+
+        <button type="submit"
+                class="w-full bg-sage-600 hover:bg-sage-700 text-cream py-3 rounded-lg font-medium transition duration-300">
+          Join Healora
+        </button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bg-ink text-cream/70">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-14">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+
+      <div class="md:col-span-2">
+        <p class="font-serif text-2xl text-cream mb-3">HEALORA</p>
+        <p class="text-sm max-w-xs leading-relaxed">Simple guidance for healthier everyday habits.</p>
+      </div>
+
+      <div>
+        <p class="text-cream text-sm font-medium mb-3">Explore</p>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#home" class="hover:text-cream transition">Home</a></li>
+          <li><a href="#about" class="hover:text-cream transition">About</a></li>
+          <li><a href="#benefits" class="hover:text-cream transition">Benefits</a></li>
+          <li><a href="#tips" class="hover:text-cream transition">Tips</a></li>
+          <li><a href="#contact" class="hover:text-cream transition">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-cream text-sm font-medium mb-3">Follow</p>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-cream transition">Instagram</a></li>
+          <li><a href="#" class="hover:text-cream transition">YouTube</a></li>
+          <li><a href="#" class="hover:text-cream transition">Facebook</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="border-t border-cream/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-cream/50">
+      <p>© 2026 Healora. All rights reserved.</p>
+      <div class="flex gap-5">
+        <a href="#" class="hover:text-cream transition">Privacy Policy</a>
+        <a href="#" class="hover:text-cream transition">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    const isHidden = mobileMenu.classList.toggle('hidden');
+    menuBtn.setAttribute('aria-expanded', String(!isHidden));
+  });
+</script>
+
+</body>
+</html>
