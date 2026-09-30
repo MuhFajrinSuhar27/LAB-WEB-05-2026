@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth motion-reduce:scroll-auto">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Kelas seduh kopi Nusantara tatap muka: cicip enam kopi, sangrai sendiri, dan pulang membawa biji segar." />
+    <title>Ladang Rasa | Kelas Seduh Kopi Nusantara</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+            forest: "#141b47",
+            leaf: "#3d4fa6",
+            crema: "#f2b01e",
+            paper: "#f6f5f2",
+            bean: "#1d1a33",
+            },
+            keyframes: { rise: { from: { opacity: "0", transform: "translateY(18px)" } } },
+            animation: {
+              rise: "rise .9s cubic-bezier(.2,.7,.2,1) both",
+              "rise-late": "rise .9s cubic-bezier(.2,.7,.2,1) .15s both",
+            },
+            fontFamily: {
+              serif: ["Fraunces", "Georgia", "serif"],
+              sans: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-paper font-sans text-bean antialiased [&_*:focus-visible]:outline [&_*:focus-visible]:outline-[3px] [&_*:focus-visible]:outline-offset-[3px] [&_*:focus-visible]:outline-crema">
+    <a href="#tentang" class="sr-only focus:not-sr-only focus:absolute focus:z-[60] focus:bg-crema focus:p-3">Lompat ke konten</a>
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-50 border-b border-white/10 bg-forest/95 backdrop-blur" aria-label="Utama">
+      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-1 px-6 py-3">
+        <a href="#beranda" class="font-serif text-xl font-bold text-crema">Ladang Rasa</a>
+        <ul class="flex flex-wrap items-center gap-x-6 gap-y-1 text-sm font-medium text-indigo-100">
+          <li><a href="#beranda" class="block py-2 hover:text-crema">Beranda</a></li>
+          <li><a href="#tentang" class="block py-2 hover:text-crema">Tentang</a></li>
+          <li><a href="#layanan" class="block py-2 hover:text-crema">Yang kamu dapat</a></li>
+          <li><a href="#testimoni" class="block py-2 hover:text-crema">Testimoni</a></li>
+          <li><a href="#kontak" class="block rounded-full bg-crema px-5 py-2 text-center font-semibold text-forest hover:bg-amber-300">Daftar</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- HERO (header + hero digabung) -->
+    <header id="beranda" class="scroll-mt-20 relative overflow-hidden bg-forest px-6 pb-32 pt-16 text-white md:pt-24">
+      <div aria-hidden="true" class="absolute inset-0 bg-[image:radial-gradient(circle_at_50%_50%,rgba(242,176,30,.28)_0_3px,transparent_4px),radial-gradient(circle_at_0_0,transparent_0_17px,rgba(255,255,255,.08)_18px_19px,transparent_20px),radial-gradient(circle_at_100%_100%,transparent_0_17px,rgba(255,255,255,.08)_18px_19px,transparent_20px)] bg-[length:56px_56px] [mask-image:linear-gradient(115deg,#000,transparent_65%)]"></div>
+      <div aria-hidden="true" class="absolute -right-32 -top-32 h-[34rem] w-[34rem] rounded-full bg-[image:radial-gradient(circle,rgba(242,176,30,.28),transparent_65%)]"></div>
+      <div class="relative mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-[1.1fr_0.9fr]">
+        <div class="motion-safe:animate-rise">
+          <p class="text-sm font-medium text-indigo-200">Kelas seduh kopi Nusantara</p>
+          <h1 class="mt-4 font-serif text-5xl font-bold leading-[1.05] tracking-tight sm:text-7xl">
+            Dari biji sampai cangkir, dalam satu hari.
+          </h1>
+          <p class="mt-6 max-w-lg text-lg leading-relaxed text-indigo-100">
+            Belajar bersama barista berpengalaman, cicip enam kopi dari enam daerah, lalu pulang membawa biji sangrai segar buatanmu sendiri.
+          </p>
+          <div class="mt-9 flex flex-wrap gap-4">
+            <a href="#kontak" class="rounded-full bg-crema px-7 py-3.5 font-semibold text-forest transition hover:bg-amber-300">Daftar kelas</a>
+            <a href="#tentang" class="rounded-full border border-indigo-300/60 px-7 py-3.5 font-semibold hover:bg-white/10">Kenali kami</a>
+          </div>
+          <p class="mt-6 text-sm text-indigo-200">Sesi 5 jam, maksimal 12 peserta, biji dari petani binaan.</p>
+        </div>
+
+        <aside class="motion-safe:animate-rise-late rounded-3xl bg-paper p-7 text-bean shadow-2xl ring-4 ring-crema/40" aria-label="Enam kopi yang dicicip">
+          <h2 class="font-serif text-2xl font-bold">Meja cicip hari ini</h2>
+          <p class="mt-1 text-sm text-bean/70">Enam daerah, enam karakter rasa.</p>
+          <ul class="mt-5 divide-y divide-bean/10 text-sm">
+            <li class="flex justify-between py-3"><b>Gayo</b><span class="text-bean/70">rempah, body tebal</span></li>
+            <li class="flex justify-between py-3"><b>Toraja</b><span class="text-bean/70">cokelat, herbal</span></li>
+            <li class="flex justify-between py-3"><b>Flores</b><span class="text-bean/70">manis, floral</span></li>
+            <li class="flex justify-between py-3"><b>Kintamani</b><span class="text-bean/70">jeruk, segar</span></li>
+            <li class="flex justify-between py-3"><b>Java</b><span class="text-bean/70">karamel, seimbang</span></li>
+            <li class="flex justify-between py-3"><b>Kerinci</b><span class="text-bean/70">buah, asam lembut</span></li>
+          </ul>
+        </aside>
+      </div>
+      <svg class="absolute inset-x-0 bottom-0 h-12 w-full text-paper md:h-16" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 64V32C240 0 480 0 720 24s480 32 720 0v40z"/></svg>
+    </header>
+
+    <main>
+      <!-- TENTANG -->
+      <section id="tentang" class="scroll-mt-20 mx-auto max-w-6xl px-6 py-24">
+        <div class="grid gap-12 md:grid-cols-5">
+          <h2 class="font-serif text-3xl font-bold leading-tight text-forest sm:text-4xl md:col-span-2">
+            Kopi yang dipahami, bukan sekadar diminum.
+          </h2>
+          <div class="space-y-5 leading-relaxed text-bean/80 md:col-span-3">
+            <p>
+              Ladang Rasa adalah komunitas pencinta kopi yang berdiri untuk satu tujuan: membuat kopi lokal lebih dikenal dan lebih dihargai. Kami mengajak siapa saja, dari pemula hingga penggemar berat, belajar langsung dari sumbernya.
+            </p>
+            <p>
+              Setiap kelas membahas asal biji, cara sangrai, teknik seduh manual, dan cara menilai rasa. Semua bahan berasal dari petani yang kami dampingi, sehingga setiap pendaftaran ikut mendukung kebun mereka.
+            </p>
+            <dl class="grid grid-cols-3 gap-4 pt-4 text-forest">
+              <div class="rounded-2xl bg-crema/30 p-4"><dt class="order-2 text-sm">alumni kelas</dt><dd class="font-serif text-3xl font-bold">1.200+</dd></div>
+              <div class="rounded-2xl bg-leaf/15 p-4"><dt class="text-sm">petani mitra</dt><dd class="font-serif text-3xl font-bold">18</dd></div>
+              <div class="rounded-2xl bg-bean/10 p-4"><dt class="text-sm">rating peserta</dt><dd class="font-serif text-3xl font-bold">4,9</dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <!-- LAYANAN -->
+      <section id="layanan" class="scroll-mt-20 bg-[#e9ebf7] px-6 py-24">
+        <div class="mx-auto max-w-6xl">
+          <h2 class="font-serif text-3xl font-bold text-forest sm:text-4xl">Yang kamu dapat di setiap kelas</h2>
+          <div class="mt-12 grid gap-x-10 gap-y-10 sm:grid-cols-2">
+            <article class="flex gap-5 border-t-2 border-forest pt-6">
+              <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-crema/30 text-3xl" aria-hidden="true">🫘</span>
+              <div>
+                <h3 class="font-serif text-xl font-bold text-forest">Cicip enam kopi</h3>
+                <p class="mt-2 leading-relaxed text-bean/80">Bandingkan rasa biji dari Gayo, Toraja, Flores, Kintamani, Java, dan Kerinci.</p>
+              </div>
+            </article>
+            <article class="flex gap-5 border-t-2 border-forest pt-6">
+              <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-crema/30 text-3xl" aria-hidden="true">🔥</span>
+              <div>
+                <h3 class="font-serif text-xl font-bold text-forest">Sangrai sendiri</h3>
+                <p class="mt-2 leading-relaxed text-bean/80">Coba mesin sangrai kecil dan bawa pulang hasilnya dalam kemasan.</p>
+              </div>
+            </article>
+            <article class="flex gap-5 border-t-2 border-forest pt-6">
+              <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-crema/30 text-3xl" aria-hidden="true">🫖</span>
+              <div>
+                <h3 class="font-serif text-xl font-bold text-forest">Teknik seduh manual</h3>
+                <p class="mt-2 leading-relaxed text-bean/80">Praktik V60, French press, dan Aeropress dengan pendampingan barista.</p>
+              </div>
+            </article>
+            <article class="flex gap-5 border-t-2 border-forest pt-6">
+              <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-crema/30 text-3xl" aria-hidden="true">🤝</span>
+              <div>
+                <h3 class="font-serif text-xl font-bold text-forest">Komunitas seumur hidup</h3>
+                <p class="mt-2 leading-relaxed text-bean/80">Gabung grup alumni untuk patungan biji, kopdar, dan kunjungan kebun.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONI -->
+      <section id="testimoni" class="scroll-mt-20 mx-auto max-w-6xl px-6 py-24">
+        <h2 class="font-serif text-3xl font-bold text-forest sm:text-4xl">Kata mereka yang sudah ikut</h2>
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+          <figure class="flex flex-col justify-between rounded-3xl bg-forest p-8 text-white md:row-span-1">
+            <blockquote class="font-serif text-xl leading-relaxed">
+              Sebelumnya saya cuma tahu kopi sachet. Sekarang tiap pagi saya seduh sendiri, dan rasanya jauh lebih enak.
+            </blockquote>
+            <figcaption class="mt-8 text-sm text-indigo-200"><b class="block text-white">Andi Pratama</b>Mahasiswa</figcaption>
+          </figure>
+          <figure class="flex flex-col justify-between rounded-3xl bg-white p-8 shadow-sm ring-1 ring-bean/10">
+            <blockquote class="leading-relaxed">
+              Penjelasannya jelas dan tidak menggurui. Saya pulang dengan ilmu yang langsung bisa dipraktikkan di kafe saya.
+            </blockquote>
+            <figcaption class="mt-8 text-sm text-bean/70"><b class="block text-forest">Sinta Maharani</b>Pemilik kafe</figcaption>
+          </figure>
+          <figure class="flex flex-col justify-between rounded-3xl bg-crema p-8 text-forest">
+            <blockquote class="leading-relaxed">
+              Paling seru waktu sangrai sendiri. Komunitas alumninya juga ramah dan aktif.
+            </blockquote>
+            <figcaption class="mt-8 text-sm"><b class="block">Rizal Hakim</b>Desainer grafis</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- FORM -->
+      <section id="kontak" class="scroll-mt-20 bg-forest px-6 py-24">
+        <div class="mx-auto grid max-w-6xl items-start gap-12 md:grid-cols-2">
+          <div class="text-white">
+            <h2 class="font-serif text-3xl font-bold sm:text-4xl">Amankan kursimu di kelas berikutnya</h2>
+            <p class="mt-4 max-w-md leading-relaxed text-indigo-100">
+              Kuota terbatas 12 orang per sesi. Isi formulir dan kami akan mengirim jadwal serta detail pembayaran lewat email.
+            </p>
+            <p class="mt-6 inline-block rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-crema">
+              Biaya kelas Rp350.000, sudah termasuk biji dan makan siang
+            </p>
+          </div>
+
+          <form id="daftar" class="space-y-5 rounded-3xl bg-paper p-8 shadow-xl" novalidate>
+            <div>
+              <label for="nama" class="mb-1 block text-sm font-semibold text-forest">Nama lengkap</label>
+              <input id="nama" name="nama" type="text" required autocomplete="name" placeholder="Contoh: Budi Santoso"
+                class="w-full rounded-xl border border-bean/20 bg-white px-4 py-3 placeholder:text-bean/40" />
+            </div>
+            <div>
+              <label for="email" class="mb-1 block text-sm font-semibold text-forest">Email</label>
+              <input id="email" name="email" type="email" required autocomplete="email" placeholder="nama@email.com"
+                class="w-full rounded-xl border border-bean/20 bg-white px-4 py-3 placeholder:text-bean/40" />
+            </div>
+            <div>
+              <label for="sesi" class="mb-1 block text-sm font-semibold text-forest">Pilih sesi</label>
+              <select id="sesi" name="sesi" class="w-full rounded-xl border border-bean/20 bg-white px-4 py-3">
+                <option>Sabtu pagi (08.00 - 13.00)</option>
+                <option>Sabtu siang (14.00 - 19.00)</option>
+                <option>Minggu pagi (08.00 - 13.00)</option>
+              </select>
+            </div>
+            <div>
+              <label for="pesan" class="mb-1 block text-sm font-semibold text-forest">Catatan (opsional)</label>
+              <textarea id="pesan" name="pesan" rows="3" placeholder="Alergi, pertanyaan, atau permintaan khusus"
+                class="w-full rounded-xl border border-bean/20 bg-white px-4 py-3 placeholder:text-bean/40"></textarea>
+            </div>
+            <p id="status" role="status" class="hidden rounded-xl px-4 py-3 text-sm font-medium"></p>
+            <button type="submit" class="w-full rounded-full bg-forest px-6 py-3.5 font-semibold text-white transition hover:bg-leaf">
+              Kirim pendaftaran
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-bean px-6 py-14 text-stone-300">
+      <div class="mx-auto grid max-w-6xl gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div>
+          <p class="font-serif text-xl font-bold text-crema">Ladang Rasa</p>
+          <p class="mt-3 max-w-xs text-sm leading-relaxed">Komunitas dan kelas seduh kopi Nusantara untuk semua kalangan.</p>
+        </div>
+        <div class="text-sm">
+          <p class="font-semibold text-white">Kontak</p>
+          <ul class="mt-3 space-y-2">
+            <li><a href="mailto:halo@ladangrasa.id" class="hover:text-crema">halo@ladangrasa.id</a></li>
+            <li><a href="tel:+6281234567890" class="hover:text-crema">+62 812 3456 7890</a></li>
+            <li>Jl. Kebun Kopi No. 12</li>
+          </ul>
+        </div>
+        <div class="text-sm">
+          <p class="font-semibold text-white">Media sosial</p>
+          <ul class="mt-3 space-y-2">
+            <li><a href="#" class="hover:text-crema">Instagram @ladangrasa</a></li>
+            <li><a href="#" class="hover:text-crema">TikTok @ladangrasa</a></li>
+            <li><a href="#" class="hover:text-crema">YouTube Ladang Rasa</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mx-auto mt-10 flex max-w-6xl flex-wrap items-center justify-between gap-3 border-t border-white/15 pt-6 text-xs">
+        <p>&copy; 2026 Ladang Rasa. Hak cipta dilindungi.</p>
+        <p class="flex gap-4">
+          <a href="#" class="hover:text-white">Kebijakan Privasi</a>
+          <a href="#" class="hover:text-white">Syarat &amp; Ketentuan</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+
+      // Validasi form
+      const form = document.getElementById("daftar");
+      const status = document.getElementById("status");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const nama = form.nama.value.trim();
+        const okEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.value.trim());
+        status.className = "rounded-xl px-4 py-3 text-sm font-medium";
+        if (!nama || !okEmail) {
+          status.classList.add("bg-red-100", "text-red-800");
+          status.textContent = !nama
+            ? "Isi nama lengkap terlebih dahulu."
+            : "Masukkan alamat email yang valid, contoh: nama@email.com.";
+          (!nama ? form.nama : form.email).focus();
+          return;
+        }
+        status.classList.add("bg-indigo-100", "text-indigo-900");
+        status.textContent = `Terima kasih, ${nama}. Pendaftaranmu sudah kami terima. Cek email untuk jadwal dan pembayaran.`;
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
