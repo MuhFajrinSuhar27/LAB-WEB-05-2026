@@ -1,0 +1,348 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f4f6f9;
+
+    color: #26344f;
+
+}
+
+
+
+.container {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 35px auto;
+
+}
+
+
+
+.card {
+
+    background-color: white;
+
+    border: 1px solid #dfe4ec;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.06);
+
+}
+
+
+
+.header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+}
+
+
+.title-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background-color: #eef0ff;
+
+    color: #504bd6;
+
+    font-size: 20px;
+
+}
+
+
+.title h1 {
+
+    font-size: 24px;
+
+    margin-bottom: 3px;
+
+}
+
+
+.title p {
+
+    color: #8993a8;
+
+    font-size: 13px;
+
+}
+
+
+.limit {
+
+    background-color: #edf4ff;
+
+    color: #3769ab;
+
+    padding: 12px 16px;
+
+    border-radius: 11px;
+
+    font-size: 13px;
+
+}
+
+
+.limit strong {
+
+    margin-left: 4px;
+
+}
+
+
+
+.table-wrapper {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+}
+
+
+table {
+
+    width: 100%;
+
+    min-width: 800px;
+
+    border-collapse: collapse;
+
+}
+
+
+thead {
+
+    background-color: #f2f5f9;
+
+}
+
+
+th {
+
+    padding: 14px;
+
+    text-align: left;
+
+    color: #52617b;
+
+    font-size: 13px;
+
+}
+
+
+td {
+
+    padding: 14px;
+
+    border-bottom: 1px solid #edf0f4;
+
+    color: #536078;
+
+    font-size: 13px;
+
+}
+
+
+.name {
+
+    font-weight: 700;
+
+    color: #293650;
+
+}
+
+
+.average {
+
+    font-weight: 700;
+
+    color: #293650;
+
+}
+
+
+
+.status {
+
+    display: inline-block;
+
+    padding: 6px 11px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+.lulus {
+
+    background-color: #dcf7eb;
+
+    color: #16825b;
+
+}
+
+
+.tidak-lulus {
+
+    background-color: #ffe3e3;
+
+    color: #d54040;
+
+}
+
+
+
+
+.info {
+
+    margin-top: 18px;
+
+    padding: 14px;
+
+    border-radius: 11px;
+
+    background-color: #eef7ff;
+
+    color: #3474bf;
+
+    text-align: center;
+
+    font-size: 13px;
+
+}
+
+
+
+.assistant {
+
+    margin-bottom: 20px;
+
+    color: #7c879b;
+
+    font-size: 13px;
+
+}
+
+
+.assistant strong {
+
+    color: #273551;
+
+}
+
+
+
+
+.access-denied {
+
+    padding: 15px;
+
+    border-left: 4px solid #e45555;
+
+    border-radius: 6px;
+
+    background-color: #fff0f0;
+
+}
+
+
+.access-denied h2 {
+
+    margin-bottom: 3px;
+
+    color: #c83f3f;
+
+    font-size: 17px;
+
+}
+
+
+.access-denied p {
+
+    color: #db6a6a;
+
+    font-size: 12px;
+
+}
+
+
+
+
+@media (max-width: 650px) {
+
+    .card {
+
+        padding: 20px;
+
+    }
+
+
+    .header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+
+    .title h1 {
+
+        font-size: 20px;
+
+    }
+
+}
