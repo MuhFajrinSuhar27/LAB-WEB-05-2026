@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Tugas Tim</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-amber-100 text-amber-100 min-h-screen">
+
+    <header class="bg-amber-100 text-pink-400 p-6 shadow-md">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="text-2xl font-bold">Manajemen Tugas Tim</h1>
+            <p class="mt-2 text-mauve-200">Kelola anggota dan tugas tim dengan mudah.</p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <section class="bg-pink-400 rounded-lg shadow p-5">
+                <h2 class="text-xl font-bold mb-4">Daftar Anggota</h2>
+
+                <p id="Statusanggota" class="text-amber-100 mb-3">
+                    Memuat...
+                </p>
+
+                <div id="Daftaranggota" class="flex flex-col gap-2"></div>
+
+                <p id="Erroranggota" class="text-red-600 mt-3"></p>              
+            </section>
+
+            <section class="bg-pink-400 rounded-lg shadow p-5 md:col-span-2">
+                <h2 id="Judultugas" class="text-xl font-bold mb-4">Pilih Anggotamu</h2>
+                <p id="Statustugas" class="text-amber-100 mb-3"></p>
+                <p id="Errortugas" class="text-red-600 mb-3"></p>
+
+                <div class="bg-taupe-700 p-4 rounded-lg mb-5"></div>
+                    <p class="font-semibold">Progres Tugas</p>
+                    <p id="Progrestugas" class="text-amber-100 mt-1">0 dari 0 tugas selesai!</p>
+
+                    <div class="mb-5">
+                        <label for="Caritugas" class="block font-semibold mb-2">
+                            Cari Tugas
+                        </label>
+
+                        <input
+                        type="text"
+                        id="Caritugas"
+                        placeholder="Masukkan judul tugas"
+                        class="w-full border rounded-lg p-3 text-black focus:outline-none focus:ring-2 focus:ring-pink-200">
+                    </div>
+
+                    <p id="Pesanpencarian" class="text-amber-100 mb-3"></p>
+
+                    <div id="Daftartugas" class="flex flex-col gap-3"></div>
+
+                    <div class="border-t mt-6 pt-5">
+                        <h3 class="text-lg font-bold mb-3">Tambah Tugas Baru</h3>
+                        
+                        <form id="Formtugas">
+                            <label for="Judulbaru" class="block mb-2 font-medium">Judul Tugas</label>
+
+                            <input
+                                type="text"
+                                id="Judulbaru"
+                                placeholder="Masukkan judul tugas"
+                                class="w-full border rounded-lg p-3 text-black focus:outline-none focus:ring-2 focus:ring-pink-200 mb-3">
+
+                                <p id="Errorform" class="text-red-600 mb-3"></p>
+
+                                <button
+                                    type="submit"
+                                    id="Tombolsimpan"
+                                    class="mt-4 bg-pink-500 text-white rounded-lg py-2 px-4 hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-200">
+                                    Simpan Tugas
+                                </button>
+                        </form>
+
+                        <p id="Notifikasi" class="text-amber-100 font-semibold mt-4"></p>
+
+                    </div>
+            </section>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
