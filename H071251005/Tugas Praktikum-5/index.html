@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxTask Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --warna-latar: #080808;
+            --warna-kartu: #111111;
+            --warna-teks: #FFFFFF;
+            --warna-teks-sekunder: #A3A3A3;
+            --warna-merah: #FF3030;
+            --warna-merah-hover: #FF4D4D;
+            --warna-border: #292929;
+            --warna-error: #FF7070;
+            --warna-placeholder: #7A7A7A;
+            --warna-teks-tombol-merah: #080808;
+            --warna-latar-transparan: rgba(17, 17, 17, 0.72);
+            --warna-merah-transparan: rgba(255, 48, 48, 0.12);
+            --warna-border-merah-transparan: rgba(255, 48, 48, 0.28);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--warna-latar);
+            color: var(--warna-teks);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .kontainer-utama {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 280px;
+            background-color: var(--warna-kartu);
+            border-right: 1px solid var(--warna-border);
+            padding: 2rem 1.5rem;
+            overflow-y: auto;
+            position: fixed;
+            height: 100vh;
+            left: 0;
+            top: 0;
+        }
+
+        .area-kerja {
+            margin-left: 280px;
+            flex: 1;
+            padding: 2rem;
+            overflow-y: auto;
+        }
+
+        .judul-aplikasi {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--warna-teks);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .ikon-aplikasi {
+            width: 28px;
+            height: 28px;
+            background-color: var(--warna-merah);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .subtitle-aplikasi {
+            font-size: 0.875rem;
+            color: var(--warna-teks-sekunder);
+            margin-bottom: 2rem;
+        }
+
+        .menu-navigasi {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .item-menu {
+            padding: 0.875rem 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            color: var(--warna-teks-sekunder);
+            transition: all 0.2s ease;
+        }
+
+        .item-menu:hover {
+            background-color: var(--warna-merah-transparan);
+            color: var(--warna-teks);
+        }
+
+        .item-menu.aktif {
+            background-color: var(--warna-merah-transparan);
+            color: var(--warna-merah);
+            border-left: 3px solid var(--warna-merah);
+            padding-left: calc(1rem - 3px);
+        }
+
+        .label-daftar-anggota {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--warna-teks-sekunder);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .daftar-anggota {
+            list-style: none;
+        }
+
+        .item-anggota {
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: var(--warna-teks-sekunder);
+            transition: all 0.2s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .item-anggota:hover {
+            background-color: var(--warna-merah-transparan);
+            color: var(--warna-teks);
+        }
+
+        .item-anggota.terpilih {
+            background-color: var(--warna-merah-transparan);
+            color: var(--warna-merah);
+            border-left: 3px solid var(--warna-merah);
+            padding-left: calc(1rem - 3px);
+            font-weight: 600;
+        }
+
+        .pesan-muatan {
+            padding: 1rem;
+            text-align: center;
+            color: var(--warna-teks-sekunder);
+            font-size: 0.9rem;
+        }
+
+        .pesan-error-anggota {
+            padding: 1rem;
+            background-color: rgba(255, 112, 112, 0.1);
+            border: 1px solid var(--warna-border-merah-transparan);
+            border-radius: 6px;
+            color: var(--warna-error);
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .header-dashboard {
+            margin-bottom: 2.5rem;
+        }
+
+        .judul-header {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--warna-teks);
+            margin-bottom: 0.5rem;
+        }
+
+        .deskripsi-header {
+            color: var(--warna-teks-sekunder);
+            font-size: 0.95rem;
+        }
+
+        .anggota-terpilih-info {
+            padding: 1rem;
+            background-color: var(--warna-merah-transparan);
+            border: 1px solid var(--warna-border-merah-transparan);
+            border-radius: 6px;
+            margin-top: 1rem;
+            color: var(--warna-teks);
+            font-size: 0.9rem;
+        }
+
+        .pesan-pilih-anggota {
+            padding: 1rem;
+            background-color: var(--warna-merah-transparan);
+            border: 1px solid var(--warna-border-merah-transparan);
+            border-radius: 6px;
+            color: var(--warna-teks-sekunder);
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .grid-statistik {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .kartu-statistik {
+            background-color: var(--warna-kartu);
+            border: 1px solid var(--warna-border);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .label-statistik {
+            color: var(--warna-teks-sekunder);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .angka-statistik {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--warna-teks);
+        }
+
+        .kartu-statistik.menonjol {
+            border-color: var(--warna-merah);
+            background: linear-gradient(135deg, var(--warna-kartu) 0%, rgba(255, 48, 48, 0.05) 100%);
+        }
+
+        .kartu-statistik.menonjol .angka-statistik {
+            color: var(--warna-merah);
+        }
+
+        .panel-progres {
+            background-color: var(--warna-kartu);
+            border: 1px solid var(--warna-border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .nama-anggota-progres {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--warna-teks);
+            margin-bottom: 1rem;
+        }
+
+        .info-progres {
+            color: var(--warna-teks-sekunder);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            height: 8px;
+            background-color: var(--warna-border);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 0.75rem;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--warna-merah), var(--warna-merah-hover));
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 4px;
+            box-shadow: 0 0 12px rgba(255, 48, 48, 0.4);
+        }
+
+        .persentase-progres {
+            color: var(--warna-merah);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: 0.75rem;
+        }
+
+        .section-pencarian-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .kartu-formulir {
+            background-color: var(--warna-kartu);
+            border: 1px solid var(--warna-border);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .label-form {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--warna-teks);
+            margin-bottom: 0.75rem;
+        }
+
+        .input-form {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--warna-border);
+            border-radius: 6px;
+            color: var(--warna-teks);
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        .input-form::placeholder {
+            color: var(--warna-placeholder);
+        }
+
+        .input-form:focus {
+            outline: none;
+            border-color: var(--warna-merah);
+            box-shadow: 0 0 0 3px var(--warna-merah-transparan);
+        }
+
+        .tombol-simpan {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background-color: var(--warna-merah);
+            border: 1px solid var(--warna-merah);
+            border-radius: 6px;
+            color: var(--warna-teks-tombol-merah);
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            margin-top: 1rem;
+        }
+
+        .tombol-simpan:hover:not(:disabled) {
+            background-color: var(--warna-merah-hover);
+            border-color: var(--warna-merah-hover);
+            box-shadow: 0 0 16px rgba(255, 48, 48, 0.3);
+        }
+
+        .tombol-simpan:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .pesan-validasi {
+            font-size: 0.85rem;
+            color: var(--warna-error);
+            margin-top: 0.5rem;
+            display: none;
+        }
+
+        .pesan-validasi.tampil {
+            display: block;
+        }
+
+        .notifikasi {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 1rem 1.5rem;
+            background-color: var(--warna-kartu);
+            border: 1px solid var(--warna-border-merah-transparan);
+            border-radius: 6px;
+            color: var(--warna-merah);
+            font-size: 0.9rem;
+            font-weight: 500;
+            z-index: 1000;
+            animation: slideIn 0.3s ease;
+            max-width: 300px;
+        }
+
+        .notifikasi.berhasil {
+            border-color: var(--warna-border-merah-transparan);
+            color: var(--warna-merah);
+            background: linear-gradient(135deg, var(--warna-kartu), rgba(255, 48, 48, 0.05));
+        }
+
+        .notifikasi.error {
+            border-color: var(--warna-border-merah-transparan);
+            color: var(--warna-error);
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .daftar-tugas {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .item-tugas {
+            background-color: var(--warna-kartu);
+            border: 1px solid var(--warna-border);
+            border-radius: 8px;
+            padding: 1.25rem;
+            transition: all 0.2s ease;
+        }
+
+        .item-tugas:hover {
+            border-color: var(--warna-merah);
+        }
+
+        .item-tugas.hidden {
+            display: none;
+        }
+
+        .konten-tugas {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .info-tugas {
+            flex: 1;
+        }
+
+        .judul-tugas {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--warna-teks);
+            margin-bottom: 0.5rem;
+        }
+
+        .judul-tugas.selesai {
+            text-decoration: line-through;
+            color: var(--warna-teks-sekunder);
+        }
+
+        .label-status {
+            display: inline-block;
+            padding: 0.4rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .label-status.belum-selesai {
+            background-color: var(--warna-merah-transparan);
+            color: var(--warna-merah);
+            border: 1px solid var(--warna-border-merah-transparan);
+        }
+
+        .label-status.selesai {
+            background-color: rgba(100, 200, 100, 0.15);
+            color: #70D070;
+            border: 1px solid rgba(100, 200, 100, 0.3);
+        }
+
+        .aksi-tugas {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .tombol-aksi {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--warna-border);
+            border-radius: 6px;
+            background-color: transparent;
+            color: var(--warna-teks-sekunder);
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .tombol-aksi:hover {
+            border-color: var(--warna-merah);
+            color: var(--warna-merah);
+            background-color: var(--warna-merah-transparan);
+        }
+
+        .tombol-tandai-selesai {
+            border-color: var(--warna-merah);
+            color: var(--warna-merah);
+        }
+
+        .tombol-tandai-selesai:hover {
+            background-color: var(--warna-merah-transparan);
+        }
+
+        .tombol-hapus {
+            border-color: var(--warna-border);
+            color: var(--warna-teks-sekunder);
+        }
+
+        .tombol-hapus:hover {
+            border-color: var(--warna-error);
+            color: var(--warna-error);
+            background-color: rgba(255, 112, 112, 0.1);
+        }
+
+        .pesan-kosong-pencarian {
+            text-align: center;
+            padding: 2rem;
+            color: var(--warna-teks-sekunder);
+        }
+
+        .pesan-belum-ada-tugas {
+            text-align: center;
+            padding: 2rem;
+            color: var(--warna-teks-sekunder);
+        }
+
+        @media (max-width: 1024px) {
+            .sidebar {
+                width: 240px;
+            }
+
+            .area-kerja {
+                margin-left: 240px;
+                padding: 1.5rem;
+            }
+
+            .section-pencarian-form {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+                border-bottom: 1px solid var(--warna-border);
+                padding: 1.5rem;
+            }
+
+            .area-kerja {
+                margin-left: 0;
+                padding: 1.5rem;
+            }
+
+            .kontainer-utama {
+                flex-direction: column;
+            }
+
+            .grid-statistik {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .section-pencarian-form {
+                grid-template-columns: 1fr;
+            }
+
+            .judul-header {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sidebar {
+                padding: 1rem;
+            }
+
+            .area-kerja {
+                padding: 1rem;
+            }
+
+            .grid-statistik {
+                grid-template-columns: 1fr;
+            }
+
+            .judul-aplikasi {
+                font-size: 1.25rem;
+            }
+
+            .kartu-formulir {
+                padding: 1rem;
+            }
+
+            .item-tugas {
+                padding: 1rem;
+            }
+
+            .konten-tugas {
+                flex-direction: column;
+            }
+
+            .aksi-tugas {
+                width: 100%;
+            }
+
+            .tombol-aksi {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="kontainer-utama">
+        <!-- SIDEBAR KIRI -->
+        <aside class="sidebar">
+            <!-- Logo dan Identitas -->
+            <div class="judul-aplikasi">
+                <div class="ikon-aplikasi">✓</div>
+                <span>LuxTask</span>
+            </div>
+            <div class="subtitle-aplikasi">Pengelolaan Tugas Tim</div>
+
+            <!-- Menu Navigasi -->
+            <ul class="menu-navigasi">
+                <li class="item-menu aktif">Dasbor</li>
+                <li class="item-menu">Anggota Tim</li>
+                <li class="item-menu">Daftar Tugas</li>
+            </ul>
+
+            <!-- Label Daftar Anggota -->
+            <div class="label-daftar-anggota">Anggota</div>
+
+            <!-- Daftar Anggota -->
+            <ul class="daftar-anggota" id="daftarAnggota">
+                <li class="pesan-muatan">Memuat anggota...</li>
+            </ul>
+
+            
+            <!-- Pesan Error Anggota -->
+            <div id="pesanErrorAnggota" style="display: none;"></div>
+        </aside>
+
+
+
+        <!-- AREA KERJA UTAMA -->
+        <main class="area-kerja">
+            <!-- HEADER DASHBOARD -->
+            <header class="header-dashboard">
+                <h1 class="judul-header">Dasbor Pengelolaan Tugas</h1>
+                <p class="deskripsi-header">Pantau tugas anggota tim dan kelola progres penyelesaiannya dalam satu tempat.</p>
+                <div id="infoAnggotaTerpilih" class="pesan-pilih-anggota">
+                    Pilih anggota dari daftar di sebelah kiri untuk melihat tugas mereka.
+                </div>
+            </header>
+
+            <!-- GRID STATISTIK -->
+            <div class="grid-statistik">
+                <div class="kartu-statistik">
+                    <div class="label-statistik">Total Anggota</div>
+                    <div class="angka-statistik" id="totalAnggota">0</div>
+                </div>
+                <div class="kartu-statistik menonjol" id="kartaTotalTugas">
+                    <div class="label-statistik">Total Tugas</div>
+                    <div class="angka-statistik" id="totalTugas">-</div>
+                </div>
+                <div class="kartu-statistik menonjol" id="kartaTugasSelesai">
+                    <div class="label-statistik">Tugas Selesai</div>
+                    <div class="angka-statistik" id="tugasSelesai">-</div>
+                </div>
+                <div class="kartu-statistik menonjol" id="kartaTugasBelumSelesai">
+                    <div class="label-statistik">Tugas Belum Selesai</div>
+                    <div class="angka-statistik" id="tugasBelumSelesai">-</div>
+                </div>
+            </div>
+
+            <!-- PANEL PROGRES TUGAS -->
+            <div class="panel-progres" id="panelProgres" style="display: none;">
+                <div class="nama-anggota-progres" id="namaAnggotaProgres"></div>
+                <div class="info-progres" id="infoProgres"></div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <div class="persentase-progres" id="persentaseProgres"></div>
+            </div>
+
+            <!-- PENCARIAN DAN FORMULIR -->
+            <div class="section-pencarian-form">
+                <!-- Pencarian Tugas -->
+                <div class="kartu-formulir">
+                    <label class="label-form" for="masukanPencarian">Cari Tugas</label>
+                    <input 
+                        type="text" 
+                        id="masukanPencarian" 
+                        class="input-form" 
+                        placeholder="Cari tugas berdasarkan judul..."
+                    >
+                </div>
+
+                <!-- Formulir Tambah Tugas -->
+                <form class="kartu-formulir" id="formTambahTugas">
+                    <label class="label-form" for="inputJudulTugas">Judul Tugas</label>
+                    <input 
+                        type="text" 
+                        id="inputJudulTugas" 
+                        class="input-form" 
+                        placeholder="Masukkan judul tugas baru..."
+                    >
+                    <div class="pesan-validasi" id="pesanValidasi"></div>
+                    <button type="submit" class="tombol-simpan" id="tombolSimpan">Simpan</button>
+                </form>
+            </div>
+
+            <!-- DAFTAR TUGAS -->
+            <div id="kontainerDaftarTugas">
+                <div class="pesan-belum-ada-tugas">
+                    Pilih anggota dari daftar untuk melihat tugasnya.
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
