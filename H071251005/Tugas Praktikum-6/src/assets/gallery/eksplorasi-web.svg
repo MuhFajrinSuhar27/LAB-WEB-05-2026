@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="72" y1="20" x2="850" y2="640" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF0E9"/><stop offset="1" stop-color="#FFF9F4"/></linearGradient>
+    <linearGradient id="card" x1="215" y1="150" x2="700" y2="500" gradientUnits="userSpaceOnUse"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#FFF9F6"/></linearGradient>
+    <linearGradient id="red" x1="320" y1="240" x2="565" y2="430" gradientUnits="userSpaceOnUse"><stop stop-color="#F28B78"/><stop offset="1" stop-color="#B84D61"/></linearGradient>
+  </defs>
+  <rect width="900" height="650" rx="42" fill="url(#bg)"/>
+  <circle cx="145" cy="125" r="63" fill="#FFD8CA"/><circle cx="782" cy="520" r="78" fill="#FFE3D8"/>
+  <rect x="170" y="118" width="560" height="420" rx="28" fill="url(#card)" stroke="#F5D6CC" stroke-width="7"/>
+  <path d="M170 148C170 131.431 183.431 118 200 118H700C716.569 118 730 131.431 730 148V181H170V148Z" fill="#FFF0EA"/>
+  <circle cx="202" cy="150" r="7" fill="#E98B7A"/><circle cx="225" cy="150" r="7" fill="#F2C17B"/><circle cx="248" cy="150" r="7" fill="#A3CDBB"/>
+  <rect x="207" y="213" width="486" height="287" rx="18" fill="#FFF9F7" stroke="#F4E3DE" stroke-width="4"/>
+  <rect x="235" y="242" width="170" height="228" rx="14" fill="url(#red)"/>
+  <circle cx="320" cy="310" r="38" fill="#FFFFFF" fill-opacity=".2"/><path d="M307 294L337 310L307 326V294Z" fill="#FFFFFF"/>
+  <rect x="257" y="374" width="126" height="10" rx="5" fill="#FFFFFF" fill-opacity=".85"/><rect x="257" y="396" width="92" height="8" rx="4" fill="#FFFFFF" fill-opacity=".65"/><rect x="257" y="414" width="110" height="8" rx="4" fill="#FFFFFF" fill-opacity=".65"/>
+  <rect x="428" y="242" width="233" height="18" rx="9" fill="#DAD8E7"/><rect x="428" y="274" width="180" height="9" rx="4.5" fill="#E9DAD5"/><rect x="428" y="293" width="205" height="9" rx="4.5" fill="#E9DAD5"/>
+  <rect x="428" y="333" width="105" height="59" rx="12" fill="#FFE0D3"/><rect x="546" y="333" width="115" height="59" rx="12" fill="#F6D6D5"/>
+  <rect x="428" y="408" width="233" height="9" rx="4.5" fill="#E9DAD5"/><rect x="428" y="428" width="192" height="9" rx="4.5" fill="#E9DAD5"/><rect x="428" y="448" width="213" height="9" rx="4.5" fill="#E9DAD5"/>
+  <path d="M102 461L126 447L149 461V493H102V461Z" fill="#E69B8B"/><path d="M93 462L126 439L158 462" stroke="#C96B61" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="450" y="584" font-family="Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" fill="#A74F56" letter-spacing="4">DESIGN • BUILD • IMPROVE</text>
+</svg>
