@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="50" y1="35" x2="840" y2="630" gradientUnits="userSpaceOnUse"><stop stop-color="#E9E9FF"/><stop offset="1" stop-color="#F8F7FF"/></linearGradient>
+    <linearGradient id="screen" x1="250" y1="150" x2="630" y2="450" gradientUnits="userSpaceOnUse"><stop stop-color="#272945"/><stop offset="1" stop-color="#4145A8"/></linearGradient>
+    <linearGradient id="desk" x1="80" y1="490" x2="810" y2="600" gradientUnits="userSpaceOnUse"><stop stop-color="#B9A6F1"/><stop offset="1" stop-color="#8C80D8"/></linearGradient>
+  </defs>
+  <rect width="900" height="650" rx="42" fill="url(#bg)"/>
+  <circle cx="735" cy="116" r="66" fill="#D9D9FF"/><circle cx="160" cy="155" r="36" fill="#FFFFFF"/>
+  <rect x="90" y="493" width="720" height="30" rx="15" fill="url(#desk)"/><path d="M155 523H184L207 620H178L155 523ZM736 523H707L684 620H713L736 523Z" fill="#8176CA"/>
+  <rect x="237" y="143" width="426" height="286" rx="24" fill="#FFFFFF" stroke="#D9D8F6" stroke-width="8"/>
+  <rect x="259" y="165" width="382" height="240" rx="13" fill="url(#screen)"/>
+  <circle cx="281" cy="188" r="5" fill="#F79CA8"/><circle cx="300" cy="188" r="5" fill="#F6D58A"/><circle cx="319" cy="188" r="5" fill="#8DDBB9"/>
+  <path d="M304 240L270 272L304 303M350 303L384 272L350 240M419 312L454 231" stroke="#AFAFFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="276" y="340" width="145" height="10" rx="5" fill="#8BE0CE"/><rect x="276" y="362" width="235" height="8" rx="4" fill="#8185D8"/><rect x="276" y="380" width="185" height="8" rx="4" fill="#8185D8"/>
+  <path d="M218 429H682L641 471H259L218 429Z" fill="#D4D5FA" stroke="#B5B7E9" stroke-width="5"/>
+  <rect x="391" y="440" width="119" height="10" rx="5" fill="#A0A2E6"/>
+  <rect x="106" y="350" width="96" height="142" rx="16" fill="#FFFFFF" stroke="#E4E2FC" stroke-width="6"/><rect x="124" y="373" width="60" height="9" rx="4.5" fill="#B4B6F5"/><rect x="124" y="394" width="44" height="8" rx="4" fill="#E0DFFA"/><rect x="124" y="414" width="55" height="8" rx="4" fill="#E0DFFA"/><rect x="124" y="434" width="35" height="8" rx="4" fill="#E0DFFA"/><circle cx="154" cy="466" r="8" fill="#8588DD"/>
+  <rect x="700" y="384" width="82" height="109" rx="16" fill="#FFFFFF" stroke="#E4E2FC" stroke-width="6"/><path d="M740 407C722 429 721 454 740 473C759 454 758 429 740 407Z" fill="#89C8AE"/><path d="M740 463L723 445M740 449L756 434" stroke="#579D82" stroke-width="5" stroke-linecap="round"/>
+  <text x="450" y="90" font-family="Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" fill="#5757B9" letter-spacing="5">IDEAS IN PROGRESS</text>
+</svg>
