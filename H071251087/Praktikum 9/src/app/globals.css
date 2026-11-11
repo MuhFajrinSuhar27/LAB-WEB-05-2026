@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-custom-sage: #B8CFB3;
+  --color-custom-cream: #FEFAF3;
+  --color-custom-soft-pink: #F6E2E9;
+  --color-custom-maroon: #790D16;
+  --color-custom-strawberry: #F9D1D9;
+  --color-custom-matcha: #838F58;
+  --color-custom-red: #E06469;
+}
+
+body {
+  background-color: #FEFAF3;
+  background-image:
+    radial-gradient(circle at 0% 0%, #B8CFB3 0%, transparent 45%),
+    radial-gradient(circle at 100% 100%, #F9D1D9 0%, transparent 50%);
+  background-attachment: fixed;
+}
